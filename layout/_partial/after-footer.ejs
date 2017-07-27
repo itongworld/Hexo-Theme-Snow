@@ -1,0 +1,75 @@
+<%- js('js/jquery.js') %>
+<%- js('js/script.js') %>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/javascript">
+
+  $(function() {
+    $(".post-content p img").height($(".post-content p img").width());
+    //alert("window onload"+ $(".post-content p img").width() + ", " + $(".post-content p img").height())
+    //console.log($(".post-content p img").width() + ", " + $(".post-content p img").height())
+
+    // $(window).load(function() {
+    //
+    //   $(".post-content p img").height($(".post-content p img").width());
+    //   //alert("window onload"+ $(".post-content p img").width() + ", " + $(".post-content p img").height())
+    //   console.log($(".post-content p img").width() + ", " + $(".post-content p img").height())
+    //
+    // });
+
+    $(window).resize(function() {
+      $(".post-content p img").height($(".post-content p img").width());
+      //alert($(".post-content p img").width() + ", " + $(".post-content p img").height())
+      //console.log($(".post-content p img").width() + ", " + $(".post-content p img").height())
+    });
+
+
+  });
+</script>
+
+
+
+<% if (is_post()) { %>
+  <script type="text/javascript">
+    $(function () {
+        $('body').scrollspy({
+            target: '.post-toc',
+            offset: 0
+        });
+
+        var $win = $(window);
+        var itemOffsetTop = $(".post-banner").offset().top;
+        var itemOuterHeight = $(".post-banner").outerHeight();
+        var winHeight = $win.height();
+        $win.scroll(function () {
+            var winScrollTop = $win.scrollTop();
+            if(!(winScrollTop > itemOffsetTop+itemOuterHeight) && !(winScrollTop < itemOffsetTop-winHeight)) {
+                console.log('出现了');
+                $(".post-toc").removeClass("f");
+            } else {
+                console.log('消失了');
+                $(".post-toc").addClass("f")
+            }
+        });
+
+        $("#popup").click(function(){
+            $("#dialog-modal").addClass("in");
+            $("#mask").addClass("in");
+        });
+
+        $("#mask").click(function(){
+            $("#dialog-modal").removeClass("in");
+            $("#mask").removeClass("in");
+        });
+
+
+        $("#popup-close").click(function(){
+            $("#dialog-modal").removeClass("in");
+            $("#mask").removeClass("in");
+
+        });
+
+    });
+  </script>
+<% } %>

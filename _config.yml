@@ -1,0 +1,69 @@
+### theme Snow config file
+### you can customize this file to ensure that your static website appears in the way you like
+### author itongworld
+
+
+# Head
+keywords: Hexo, Snow, itongworld, Web, Machine Learning, Python
+author: itongworld, itongworld@gmail.com
+description: 欧阳童的个人博客——学习，总结，提高
+title: 欧阳阳阳的个人博客
+
+
+# Theme Name
+theme_name: Snow
+blogengine_name: Hexo
+
+
+# Nav Config
+menu:
+  Home: /
+  Archives: /archives
+  About: /about
+
+
+# Social Accounts
+email: itongworld@gmail.com
+github: https://github.com/itongworld
+sina: http://weibo.com/ouyangworld
+
+
+# Default Config
+default_post_title: Untitled
+default_post_cover: "http://placehold.it/1920x500"
+default_about_photo: "http://placehold.it/300x450"
+default_user_avatar: "http://placehold.it/135x135"
+#custom_about_photo: ""
+
+# Quote
+index_quote: If I have seen a little further, It is by standing on the shoulder of giants.
+index_user_avatar: /index_user_avatar.jpg
+
+
+
+
+# Avatar
+# url '/favicon.png' in this file means source root directory in theme snow directory
+# url '/pic.jpg' in post md file means source root directory in hexo directory
+favicon: /favicon.png
+avatar: /avatar.png
+
+
+# Copyright Information
+startyear: 2017
+owner: itongworld
+
+
+# About Config
+about_user_photo: /about_user_photo.jpg
+about_user_photo_title: me
+#about_quote split by |
+about_quote: Three passions|simple but overwhelmingly strong|have governed my life|the longing for love|the search for knowledge|and unbearable pity for the suffering of mankind||These passions, like great winds|have blown me hither and thither|in a wayward course, over a great ocean of anguish|reaching to the very verge of despair
+about_quote_name: What I Have Lived For
+about_quote_author: by Bertrand Russell
+
+intros_nickname: itongworld
+intros_birthday: 1993-07-14
+intros_hometown: Handan, Hebei
+intros_college: Beijing Institute of Technology
+intros_hobby: Movie, Gaming, Journey, Photography

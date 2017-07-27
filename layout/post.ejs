@@ -1,0 +1,69 @@
+<div class="post-banner">
+    <div class="banner-background" style="background-size: cover;background-image: url('<%- page.cover_detail || theme.default_post_cover %>');"></div>
+</div>
+
+<div class="post-title">
+    <h1><%- page.title || theme.default_post_title || "Untitled" %></h1>
+    <div class="post-meta">
+            <span class="meta-entity">
+                <% var month = date(page.date, 'M'); %>
+                <% var monthMap = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']%>
+                <span class="meta-date"><%= monthMap[month]+date(page.date, ' DD, YYYY')%></span>
+            </span>
+            <span class="meta-entity">
+                <span class="meta-tags">
+                    <%
+                    var tags = [];
+                    page.tags.forEach(function(tag) {
+                    %>
+                      <a href="<%- config.root+tag.path %>"><%= tag.name %></a>
+                    <%
+                    });
+                    %>
+                </span>
+            </span>
+
+    </div>
+</div>
+
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- post container in the very middle -->
+        <div class="col-xs-8 col-xs-offset-2 col-lg-6 col-lg-offset-3">
+
+            <!-- post container: containing content, share -->
+            <div class="post-container">
+
+                <!-- post content -->
+                <div class="post-content">
+                    <%- page.content %>
+                </div>
+
+                <!-- post share -->
+                <div class="post-share">
+                    <div class="share-sina-weibo">
+                        <a class="fa fa-weibo" href="javascript:void((function(s,d,e,r,l,p,t,z,c){var f='http://service.weibo.com/share/share.php?appkey=2241392681&searchPic=true',u=z||d.location,p=['&url=',e(u),'&title=',e(t||d.title),'&source=',e(r),'&sourceUrl=',e(l),'&content=',c||'gb2312','&pic=',e(p||'')].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=440,height=430,left=',(s.width-440)/2,',top=',(s.height-430)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else a();})(screen,document,encodeURIComponent,'','','','','',''));"></a>
+                    </div>
+
+                    <div class="share-tencent-wechat">
+                        <a class="fa fa-wechat" href="javascript:void(0)" id="popup"></a>
+                    </div>
+                </div>
+            </div><!-- end of post-container -->
+
+        </div>
+
+
+        <!-- post toc(table of content) -->
+        <div class="col-xs-2 col-md-2 col-lg-3">
+            <div class="post-toc">
+                <%- toc(page.content, {class:'nav', list_number: false}) %>
+            </div>
+        </div><!-- end of post toc -->
+    </div><!-- end of row -->
+</div><!-- end of container-fluid -->
+
+<%- partial('_partial/footer') %>
+<%- partial('_partial/after-footer') %>

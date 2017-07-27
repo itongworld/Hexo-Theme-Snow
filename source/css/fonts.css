@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+
+/* Fonts Design */
+@font-face {
+    font-family: DIN;
+    src: url('../fonts/DIN/DINPro-Regular.otf');
+}
+@font-face {
+    font-family: DIN_BOLD;
+    src: url('../fonts/DIN/DINPro-Bold.otf');
+}
+
+@font-face {
+    font-family: CALSON;
+    src: url('../fonts/CALSON/ACaslonPro-Regular.otf');
+}
+@font-face {
+    font-family: CALSON_REGULAR;
+    src: url('../fonts/CALSON/ACaslonPro-Regular.otf');
+}
+@font-face {
+    font-family: CALSON;
+    src: url('../fonts/CALSON/ACaslonPro-bold.otf');
+
+    /* 400 等同于normal， 而700等同于bold */
+    font-weight: bold;
+}
+@font-face {
+    font-family: CALSON-BOLD;
+    src: url('../fonts/CALSON/ACaslonPro-bold.otf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: CALSON;
+    src: url('../fonts/CALSON/ACaslonPro-Italic.otf');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: CALSON-ITALIC;
+    src: url('../fonts/CALSON/ACaslonPro-Italic.otf');
+    font-style: italic;
+}
+@font-face {
+    font-family: CALSON;
+    src: url('../fonts/CALSON/ACaslonPro-BoldItalic.otf');
+    font-weight: bold;
+    font-style: italic;
+
+}
+@font-face {
+    font-family: CALSON-BOLDITALIC;
+    src: url('../fonts/CALSON/ACaslonPro-BoldItalic.otf');
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: CALSON;
+    src: url('../fonts/CALSON/ACaslonPro-SemiBold.otf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: CALSON-SEMIBOLD;
+    src: url('../fonts/CALSON/ACaslonPro-SemiBold.otf');
+}
+
+@font-face {
+    font-family: CALSON;
+    src: url('../fonts/CALSON/ACaslonPro-SemiBoldItalic.otf');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: CALSON-SEMIBOLDITALIC;
+    src: url('../fonts/CALSON/ACaslonPro-SemiBoldItalic.otf');
+}
+
+
+@font-face {
+    font-family: FUTURA;
+    src: url('../fonts/FUTURA/Futura.otf');
+
+}
+
+
+@font-face {
+    font-family: FUTURA_BOLD;
+    src: url('../fonts/FUTURA/Futura_LT_Bold.otf');
+
+}
+
+
+@font-face {
+    font-family: SIGNATURE_EN;
+    src: url('../fonts/SHRIKHAND/Shrikhand-Regular.ttf');
+
+}
+@font-face {
+    font-family: SHRIKHAND;
+    src: url('../fonts/SHRIKHAND/Shrikhand-Regular.ttf');
+}
+
+@font-face {
+    font-family: SIGNATURE_ZH_CH;
+    /*src: url('../fonts/ZH-CN/方正水柱简体.ttf');*/
+    src: url('../fonts/ZH-CN/方正正粗黑简体.ttf');
+}
+
+@font-face {
+    font-family: PROXIMA NOVA;
+    src: url('../fonts/PROXIMA NOVA/ProximaNova-Regular.otf');
+}
+
+
+@font-face {
+    font-family: AVERIA_SERIF_LIBRE;
+    src: url('../fonts/AVERIA_SERIF_LIBRE/AveriaSerifLibre-Regular.ttf');
+}
+
+@font-face {
+    font-family: AVERIA_SERIF_LIBRE;
+    src: url('../fonts/AVERIA_SERIF_LIBRE/AveriaSerifLibre-Bold.ttf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: AVERIA_SERIF_LIBRE_BOLD;
+    src: url('../fonts/AVERIA_SERIF_LIBRE/AveriaSerifLibre-Bold.ttf');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

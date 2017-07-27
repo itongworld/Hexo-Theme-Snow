@@ -1,0 +1,51 @@
+<img src="../img/label_left.png" alt="" class="img_label_left">
+
+<div class="blog-about">
+  <div class="blog-poetry">
+
+    <%
+      var about_quotes = theme.about_quote.split('||');
+
+      about_quotes.forEach(function(lines, i) {
+        var quotes_lines = lines.split('|');
+        quotes_lines.forEach(function(word) {
+        %>
+            <p><%= word %></p>
+        <%
+        });
+        %>
+        <% if (i != about_quotes.length-1) { %>
+          <br/>
+        <% } %>
+    <%
+    });
+    %>
+
+    <p class="poetry-detailname"><%= theme.about_quote_name %></p>
+    <p class="poetry-detailauthor"><%= theme.about_quote_author %></p>
+
+
+  </div>
+
+  <div class="blog-intro">
+    <div class="intro-pic">
+      <% var u; %>
+      <% if (theme.about_user_photo) { %>
+        <% u = '../' + theme.about_user_photo %>
+      <% } else { %>
+        <% u = theme.default_about_photo %>
+      <% } %>
+      <img src="<%= u %>" alt="" title="<%= theme.about_user_photo_title %>">
+    </div>
+
+    <div class="intro-detail">
+      <div class="intro-detail-item"><h4>昵称</h4><span>itongworld</span></div>
+      <div class="intro-detail-item"><h4>生日</h4><span>1993-07-14</span></div>
+      <div class="intro-detail-item"><h4>家乡</h4><span>河北省邯郸市</span></div>
+      <div class="intro-detail-item"><h4>大学</h4><span>北京理工大学</span></div>
+      <div class="intro-detail-item"><h4>爱好</h4><span>电影，摄影，游戏，旅游</span></div>
+    </div>
+
+  </div>
+
+</div>

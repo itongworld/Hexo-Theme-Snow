@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="row">
+      <!-- left brief profile -->
+      <%- partial('_partial/profile') %>
+
+      <!-- top nav -->
+      <% if (is_home()) { %>
+        <%- partial('_partial/nav', {Name: 'Home'}) %>
+      <% } else if (is_category()) { %>
+        <%- partial('_partial/nav', {Name: 'Category'}) %>
+      <% } else if (is_tag()) { %>
+        <%- partial('_partial/nav', {Name: 'Tag'}) %>
+      <% } else if (is_post()) { %>
+        <%- partial('_partial/nav', {Name: 'Post'}) %>
+      <% } else if (is_archive()) { %>
+        <%- partial('_partial/nav', {Name: 'Archives'}) %>
+      <% } else { %>
+        <%- partial('_partial/nav', {Name: 'About'}) %>
+      <% } %>
+
+      <!-- article list -->
+      <%- partial('_partial/article-page', {post: page, index: true}) %>
+
+
+
+      <!-- pagination -->
+      <%- partial('_partial/pagination')%>
+
+      <!-- footer -->
+      <%- partial('_partial/footer') %>
+    </div>
+</div>
+<%- partial('_partial/after-footer') %>

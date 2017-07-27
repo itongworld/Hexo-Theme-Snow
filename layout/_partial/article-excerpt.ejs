@@ -1,0 +1,52 @@
+<!-- website posts excerpt -->
+<article class="blog-post">
+    <div class="post-header">
+        <h1>
+          <% if (post.link) { %>
+            <a href="<%- url_for(post.link) %>" target="_blank"><%= post.title %></a>
+          <% } else { %>
+            <% if (index) { %>
+              <a href="<%- url_for(post.path) %>" target="_blank"><%- post.title || theme.default_post_title || "Untitled" %></a>
+            <% } else { %>
+              <%- post.title || theme.default_post_title || "Untitled" %>
+            <% } %>
+          <% } %>
+        </h1>
+    </div>
+
+    <div class="post-content">
+      <% if (post.excerpt && index) { %>
+        <%- post.excerpt %>
+        <p><a href="<%- url_for(post.path) %>" target="_blank">... ...</a></p>
+      <% } else { %>
+        <%- post.content %>
+      <% } %>
+
+    </div>
+
+    <div class="post-footer">
+        <div class="post-meta">
+            <span class="meta-entity">
+                <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
+                <%
+                if (config.language == 'zh_CN') { %>
+                  <span class="meta-date"><%= date(post.date, 'YYYY, MoDo')%></span>
+                <% } else { %>
+                  <span class="meta-date"><%= date(post.date, 'MMM DD, YYYY')%></span>
+                <% } %>
+            </span>
+
+            <%
+            var tags = [];
+            post.tags.forEach(function(tag){
+                tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>&nbsp;&nbsp;');
+            });
+            %>
+            <span class="meta-entity">
+                <i class="fa fa-bookmark-o" aria-hidden="true"></i>&nbsp;
+                <%- tags.join(' ') %>
+            </span>
+
+        </div>
+    </div>
+</article>

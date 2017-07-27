@@ -1,0 +1,858 @@
+@charset "utf-8";
+@import 'fonts.css';
+@import 'code.css';
+* {
+    outline: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+body{
+    /* 网站默认正文字体 */
+    /*font-family: -apple-system, BlinkMacSystemFont,*/
+    /*"Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",*/
+    /*"Fira Sans", "Droid Sans", "Helvetica Neue",*/
+    /*sans-serif;*/
+
+    /*font-family: "Microsoft YaHei", 宋体, sans-serif;*/
+    /*font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;*/
+    /*font-family: PingHei,'PingFang SC',Helvetica Neue,'Work Sans','Hiragino Sans GB','Microsoft YaHei',SimSun,sans-serif;*/
+    /*font-family: "Exo 2", "Trebuchet MS","Helvetica","Arial",'PingFang SC','Hiragino Sans GB','STHeiti Light','Microsoft YaHei','SimHei','WenQuanYi Micro Hei',sans-serif;*/
+    /*font-family: "adobe-clean", "adobe-clean-han-japanese", "Helvetica Neue", Helvetica, sans-serif;*/
+
+    /*font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;*/
+    /*font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;*/
+
+
+    font-family: "Microsoft YaHei", 宋体, sans-serif;
+
+    /* 网站默认字体颜色 */
+    color: #414141;
+    font-size: 14px;
+
+    /* 网站默认背景颜色 */
+    background-color: #fefefe;
+
+}
+
+/* bootstrap中的h1~h6设置了不同的上下外边距 */
+/* 重写h1~h6的上下外边距，其他属性可以保持不变 */
+/* margin-top:20px; margin-bottom:10px; */
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* h4~h6保持不变 */
+.h4, .h5, .h6, h4, h5, h6 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+/* 重写栅格系统的内补 */
+/* padding-left:15px;padding-right:15px; */
+.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
+p {
+    margin: 0 0 15px;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: #500095;
+}
+a:active, a:hover, a:focus {
+    text-decoration: none;
+    color: #500095;
+    opacity: .7;
+}
+
+blockquote {
+
+}
+blockquote p {
+    font-style: italic;
+}
+blockquote cite {
+    margin-left: 10px;
+    margin-right: 10px;
+    /*font-style: normal;*/
+    font-weight: bold;
+}
+
+.post-content>table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border: 1px solid #ddd;
+
+}
+.post-content>table th {
+    text-align: left
+}
+.post-content>table td {
+    text-align: left;
+}
+
+.post-content>table>tbody>tr>td, .post-content>table>tbody>tr>th, .post-content>table>tfoot>tr>td, .post-content>table>tfoot>tr>th, .post-content>table>thead>tr>td, .post-content>table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    /*border-top: 1px solid #ddd;*/
+    border: 1px solid #ddd
+}
+.post-content>table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+    /*border-bottom-width: 2px;*/
+
+}
+
+.post-content>table>thead>tr>td {
+    border-bottom-width: 2px;
+}
+
+.post-content>table>caption+thead>tr:first-child>td, .post-content>table>caption+thead>tr:first-child>th, .post-content>table>colgroup+thead>tr:first-child>td, .post-content>table>colgroup+thead>tr:first-child>th, .post-content>table>thead:first-child>tr:first-child>td, .post-content>table>thead:first-child>tr:first-child>th {
+    border-top: 0
+}
+
+.post-content>table>tbody+tbody {
+    border-top: 2px solid #ddd
+}
+
+.post-content>table table {
+    background-color: #fff
+}
+
+.post-content>table>tbody>tr:nth-of-type(odd) {
+    background-color: #f9f9f9
+}
+
+
+
+/*
+ *
+ * post page
+ *
+ */
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* post header style */
+/* ---------------------------------------------------------------------------------------------------- */
+.post-banner{
+    position: relative;
+    min-height: 250px;
+
+    height: 50%;
+}
+
+
+.banner-background{
+    width:100%;
+    height:100%;
+    background-size: cover;
+    background-position: top, center;
+    background-image: url('../images/banner.jpg');
+    position: absolute;
+    z-index: -9;
+    /*-webkit-filter: blur(2px);*/
+    /*-moz-filter: blur(2px);*/
+    /*-ms-filter: blur(2px);*/
+    /*filter: blur(2px);*/
+}
+
+
+/* 响应式设计 */
+.post-title {
+    /* 绝对定位的元素居中 */
+
+    /*width: 200px;*/
+    /*height: 200px;*/
+    /*position: absolute;*/
+    /*left: 0; top: 0; right: 0; bottom: 0;*/
+    /*margin: auto;    !* 有了这个就自动居中了 *!*/
+
+    /*width: 100%;*/
+    /*position: absolute;*/
+    /*!*left: 50%;*!*/
+    /*top: 36%;*/
+    /*color: #fefefe;*/
+    /*transform: translate(0, -100%);    !* 50%为自身尺寸的一半 *!*/
+    /*text-align: center;*/
+
+
+
+    /*width: 60%;*/
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    color: #fefefe;
+    transform: translate(-50%, -100%);    /* 50%为自身尺寸的一半 */
+    /*letter-spacing: 1px;*/
+
+
+}
+
+.post-title h1, .post-title .h1{
+    /* default h1 font size 36px */
+    text-transform: uppercase;
+    font-family: "CALSON-BOLD", 'Microsoft YaHei', sans-serif;
+    font-size: 38px;
+    line-height: 1.3;
+
+    padding-top: 0;
+    padding-bottom: 0;
+
+}
+
+
+.post-title .post-meta {
+    padding-top: 5px;
+}
+
+.post-title .post-meta .meta-entity {
+    font-size: 19px;
+    text-transform: uppercase;
+}
+
+.post-title .post-meta .meta-tags {
+    font-size: 19px;
+    text-transform: uppercase;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.post-title .post-meta .meta-tags a {
+    text-decoration: none;
+    color: #fefefe;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.post-title .post-meta .meta-tags a:hover, .post-title .post-meta .meta-tags a:active, .post-title .post-meta .meta-tags a:focus {
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 1199px) {
+    .post-title {
+
+        width: 66.666%;
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        color: #fefefe;
+        transform: translate(-50%, -100%);    /* 50%为自身尺寸的一半 */
+
+
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .post-title {
+
+        width: 66.666%;
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        color: #fefefe;
+        transform: translate(-50%, -100%);    /* 50%为自身尺寸的一半 */
+
+
+    }
+
+    .post-title h1, .post-title .h1{
+        /* default h1 font size 36px */
+        text-transform: uppercase;
+        font-family: "CALSON-BOLD";
+        /*font-size: 38px;*/
+
+        font-size: 30px;
+        line-height: 1.3;
+        padding-top: 0;
+        padding-bottom: 0;
+
+    }
+
+    .post-title .post-meta {
+        padding-top: 3px;
+    }
+
+    .post-title .post-meta .meta-entity {
+        /*font-size: 19px;*/
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+
+    .post-title .post-meta .meta-tags {
+        /*font-size: 19px;*/
+        font-size: 15px;
+        text-transform: uppercase;
+        /*padding-left: 20px;*/
+        /*padding-right: 20px;*/
+        padding-left: 18px;
+        padding-right: 18px;
+
+    }
+
+    .post-title .post-meta .meta-tags a {
+        text-decoration: none;
+        color: #fefefe;
+        /*padding-left: 5px;*/
+        /*padding-right: 5px;*/
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+    .post-title .post-meta .meta-tags a:hover, .post-title .post-meta .meta-tags a:active, .post-title .post-meta .meta-tags a:focus {
+        opacity: 0.7;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .post-title {
+
+        width: 66.666%;
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        color: #fefefe;
+        transform: translate(-50%, -100%);    /* 50%为自身尺寸的一半 */
+
+
+    }
+
+    .post-title h1, .post-title .h1{
+        /* default h1 font size 36px */
+        text-transform: uppercase;
+        font-family: "CALSON-BOLD";
+        /*font-size: 38px;*/
+
+        font-size: 22px;
+        line-height: 1.3;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .post-title .post-meta {
+        padding-top: 0;
+    }
+
+
+    .post-title .post-meta .meta-entity {
+        /*font-size: 19px;*/
+        font-size: 11px;
+        text-transform: uppercase;
+    }
+
+    .post-title .post-meta .meta-tags {
+        /*font-size: 19px;*/
+        font-size: 11px;
+        text-transform: uppercase;
+        /*padding-left: 20px;*/
+        /*padding-right: 20px;*/
+        padding-left: 12px;
+        padding-right: 12px;
+
+    }
+
+    .post-title .post-meta .meta-tags a {
+        text-decoration: none;
+        color: #fefefe;
+        /*padding-left: 5px;*/
+        /*padding-right: 5px;*/
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+    .post-title .post-meta .meta-tags a:hover, .post-title .post-meta .meta-tags a:active, .post-title .post-meta .meta-tags a:focus {
+        opacity: 0.7;
+    }
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* post toc style */
+/* ---------------------------------------------------------------------------------------------------- */
+/* TODO */
+/* 响应式设计 */
+.f {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+
+}
+.post-toc {
+    margin-top: 80px;
+    margin-left: 60px;
+    /*margin-top: 82px;*/
+
+}
+.post-toc ol {
+    list-style-type: none;
+}
+.post-toc .nav {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 重写bootstrap样式 */
+/*.nav-stacked>li+li {*/
+    /*margin-top: 2px;*/
+    /*margin-left: 0;*/
+/*}*/
+
+.post-toc .nav li {
+    margin: 0;
+}
+
+
+.post-toc .nav .nav-item {
+    
+}
+.post-toc .nav .nav-child {
+    padding-left: 0;
+}
+
+/* bootstrap中.nav>li>a的默认样式 */
+/* position:relative; display:block; padding:10px 15px; */
+.post-toc .nav li > a {
+    padding: 3px 15px;
+
+    /*margin: 10px 0;*/
+    text-decoration: none;
+    color: #747474;
+    font-weight: 500;
+    display: block;
+    font-size: 13px;
+
+}
+.post-toc .nav .nav-child li > a{
+    padding: 1px 40px;
+    /*margin: 10px 0;*/
+    text-decoration: none;
+    color: #747474;
+    font-weight: 500;
+    display: block;
+    font-size: 12px;
+}
+
+.post-toc .nav li.nav-item > a:hover,
+.post-toc .nav li.nav-item > a:focus,
+.post-toc .nav li.nav-item > a:active{
+    color: #500095;
+    border-left: 1px solid #500095;
+    background-color: transparent;
+    padding-left: 14px;
+
+}
+
+
+.post-toc .nav .nav-child li.nav-item > a:hover,
+.post-toc .nav .nav-child li.nav-item > a:focus,
+.post-toc .nav .nav-child li.nav-item > a:active
+{
+    color: #500095;
+    border-left: 1px solid #500095;
+    background-color: transparent;
+    padding-left: 39px;
+}
+
+
+.post-toc .nav li.active > a,
+.post-toc .nav li.active > a:hover,
+.post-toc .nav li.active > a:focus,
+.post-toc .nav li.active > a:active {
+    color: #500095;
+    border-left: 2px solid #500095;
+    background-color: transparent;
+    padding-left: 13px;
+    font-weight: bold;
+}
+
+.post-toc .nav .nav-child li.active > a,
+.post-toc .nav .nav-child li.active > a:hover,
+.post-toc .nav .nav-child li.active > a:focus
+.post-toc .nav .nav-child li.active > a:active
+{
+    color: #500095;
+    border-left: 2px solid #500095;
+    background-color: transparent;
+    padding-left: 38px;
+    font-weight: 500;
+}
+
+
+
+.post-toc .nav .nav-level-2 {
+    
+}
+
+
+.post-toc .nav .nav-level-3 {
+    
+}
+
+
+/* commenting styles below can explicitly displays level-3 toc */
+/* hide inactive nested list */
+.post-toc .nav .nav-child {
+    display: none;
+}
+
+/* show active nested list */
+.post-toc .nav > .active > .nav-child {
+    display: block;
+}
+
+
+
+
+
+@media screen and (max-width: 1199px) {
+    .post-toc {
+        visibility: hidden;
+    }
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* post container style */
+/* ---------------------------------------------------------------------------------------------------- */
+.post-container .post-content img {
+    /*九宫格实现*/
+    /*一个没有实现的想法是，在维持图片宽高相等的状态下，如何让图片动态裁剪，即尺寸不同，照片裁剪的内容也不同*/
+    /*这一点在高度不使用js控制的情况下（比如，height: 400px;），可以通过object-fit: cover实现，但是使用js动态设置高度后，就失效了*/
+
+    /*display: block;*/
+
+    /*height: 22.9vw;*/
+    /*js 方法最好将height设置为0*/
+    height: 0px;
+
+    /*定义基于包含块（父元素）宽度的百分比宽度。*/
+    /*max-width: 33.33%;*/
+    width: 33.33%;
+    /*width: 999999px;*/
+    /*height: 999999px;*/
+
+    margin: auto;
+    padding: 1.5px;
+    object-fit: cover;
+    border: none;
+    /*img-thumbnail*/
+    /*padding: 4px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;*/
+}
+
+@media screen and (max-width: 767px) {
+    .post-container .post-content img {
+        padding: 1px;
+    }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* post container style */
+/* ---------------------------------------------------------------------------------------------------- */
+.post-container {
+    color: #414141;
+}
+.post-container .post-content {
+    margin: 80px 0 100px;
+    position: relative;
+}
+.post-container .post-content h1, .post-container .post-content .h1 {
+    margin-top: 45px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.post-container .post-content h2, .post-container .post-content .h2 {
+    margin-top: 45px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.post-container .post-content h3, .post-container .post-content .h3 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.post-container .post-content h4, .post-container .post-content .h4,
+.post-container .post-content h5, .post-container .post-content .h5,
+.post-container .post-content h6, .post-container .post-content .h6 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.post-container .post-content p{
+    line-height: 2;
+    text-align: justify;
+
+    /* default margin-bottom:10px */
+    /*margin-bottom: 15px;*/
+
+    /* bootstrap中默认的body font-size:14px */
+    font-size: 15px;
+    /*color: #747474;*/
+}
+
+/*.post-container .post-content a {
+    text-decoration: none;
+    color: #500095;
+
+}
+
+.post-container .post-content a:hover {
+    opacity: .7;
+}*/
+
+
+.post-container .post-share {
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 300px;
+    border-top: 1px solid #eee;
+}
+
+/*.post-container .post-share ul {*/
+    /*list-style: none;*/
+    /*padding: 0;*/
+/*}*/
+
+/*.post-container .post-share ul li {*/
+    /*display: inline;*/
+    /*padding: 0 5px;*/
+/*}*/
+
+.post-container .post-share .share-sina-weibo, .post-container .post-share .share-tencent-wechat {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 7px;
+
+    /* div元素垂直居中 */
+    /*display: table-cell;*/
+    /*vertical-align: middle;*/
+    /*text-align: center;*/
+
+}
+
+.post-container .post-share .share-sina-weibo {
+    background-color: #f7671d;
+}
+
+.post-container .post-share .share-tencent-wechat {
+    background: #3caf36;
+    /*background-color: #58ba53;*/
+}
+
+.post-container .post-share .share-sina-weibo a {
+    color: #fefefe;
+    font-size: 17px;
+    text-decoration: none;
+    padding-left: 12px;
+    padding-right: 11.5px;
+    padding-top: 11px;
+    padding-bottom: 12px;
+
+}
+
+.post-container .post-share .share-tencent-wechat a {
+    color: #fefefe;
+    font-size: 17px;
+    text-decoration: none;
+    padding-left: 10.5px;
+    padding-right: 10.3px;
+    padding-top: 11px;
+    padding-bottom: 12px;
+}
+
+.post-container .post-share .share-sina-weibo a:hover, .post-container .post-share .share-sina-weibo a:active, .post-container .post-share .share-sina-weibo a:focus {
+    color: #E6162D;
+}
+
+
+.post-container .post-share .share-tencent-wechat a:hover, .post-container .post-share .share-tencent-wechat a:active, .post-container .post-share .share-tencent-wechat a:focus {
+    color: #2ba245;
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* footer style */
+/* ---------------------------------------------------------------------------------------------------- */
+.post-footer {
+    text-align: center;
+    padding-top: 250px;
+    padding-bottom: 40px;
+
+
+}
+
+/*.post-footer a {
+    text-decoration: none;
+    color: #500095;
+}
+.post-footer a:hover {
+    opacity: .7;
+}*/
+
+.post-footer .footer-copyright {
+    color: #888;
+
+}
+
+.post-footer p {
+    margin: 0 0 10px;
+    font-size: 14px;
+
+}
+
+.post-footer .footer-poweredby {
+    color: #888;
+
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* qrcode dialog and mask style */
+/* ---------------------------------------------------------------------------------------------------- */
+.dialog-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1001;
+    padding: 20px;
+    text-align: center;
+    color: #747474;
+    background: #fefefe;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    opacity: 0;
+
+    -webkit-transform: translate(-50%,-200%);
+    -moz-transform: translate(-50%,-200%);
+    -ms-transform: translate(-50%,-200%);
+    -o-transform: translate(-50%,-200%);
+    transform: translate(-50%,-200%);
+
+    visibility: hidden;
+    display: block;
+    /*-webkit-transform: translate(-50%,-100%);*/
+    /*transform: translate(-50%,-100%);*/
+
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+
+}
+
+.dialog-modal p {
+    margin-bottom: 20px;
+}
+
+
+.dialog-modal.in {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.dialog-modal a {
+    position: absolute;
+    right: 20px;
+    top: 19px;
+    color: rgba(0,0,0,.5);
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.page-modal a:hover {
+    color: rgba(0,0,0,.8);
+
+}
+
+.mask {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    pointer-events: none;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.mask.in {
+    visibility: visible;
+    pointer-events: auto;
+    opacity: .4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

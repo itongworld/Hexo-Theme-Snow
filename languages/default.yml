@@ -1,0 +1,21 @@
+categories: Categories
+category: Category
+tag: Tag
+tags: Tags
+about: About
+tagcloud: Tag Cloud
+search: Search
+searchholder: Search Articles
+comment: Comments
+archive_a: Archives
+archive_b: "Archives: %s"
+prev: Prev
+next: Next
+page: Page %d
+recent_posts: Recent Posts
+share: Share
+powered_by: Powered by
+menu:
+  Home: Home
+  Archives: Archive
+  About: About

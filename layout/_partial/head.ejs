@@ -1,0 +1,91 @@
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Description -->
+    <% if (page.description){ %>
+        <meta name="description" content="<%= page.description %>">
+    <% } else if (theme.description){ %>
+        <meta name="description" content="<%= theme.description %>">
+    <% } else if (config.description){ %>
+        <meta name="description" content="<%= config.description %>">
+    <% } %>
+
+    <!-- Keywords -->
+    <% if (page.keywords){ %>
+        <meta name="keywords" content="<%= page.keywords %>">
+    <% } else if (theme.keywords){ %>
+        <meta name="keywords" content="<%= theme.keywords %>">
+    <% } else if (config.keywords){ %>
+        <meta name="keywords" content="<%= config.keywords %>">
+    <% } %>
+
+    <!--Author-->
+    <% if (theme.author){ %>
+        <meta name="author" content="<%= theme.author %>">
+    <% } else if (config.author){ %>
+        <meta name="author" content="<%= config.author %>">
+    <% } %>
+
+    <!-- Favicon -->
+    <% if (theme.favicon){ %>
+        <link rel="icon" href="<%- theme.favicon %>" type="image/x-icon">
+    <% } else if (config.favicon){ %>
+        <link rel="icon" href="<%- config.favicon %>" type="image/x-icon">
+    <% } %>
+
+
+    <!-- Title -->
+    <%
+    var title = page.title;
+    if (title == 'about') {
+      title = __('about');
+    }
+
+    if (is_archive()){
+      title = __('archive_a');
+    } else if (is_category()){
+      title = __('category') + ': ' + page.category;
+    } else if (is_tag()){
+      title = __('tag') + ': ' + page.tag;
+    }
+
+    var titlepagination = ''
+    if (page.current > 1) titlepagination = __('page', page.current);
+
+
+    %>
+    <title>
+      <% if (title){ %>
+        <%= title %> - <% } else if (titlepagination){ %>
+        <%= titlepagination %> - <% } %>
+        <%= theme.title || config.title %>
+    </title>
+
+
+    <!-- Custom CSS -->
+    <%- css('css/main.css') %>
+    <%- css('css/fa_css/fa.css') %>
+
+
+
+
+    <!-- Different css styles for different templates -->
+    <% if (is_home()) { %>
+      <%- css('css/index.css') %>
+    <% } else if (is_post()) { %>
+      <%- css('css/post.css') %>
+    <% } else if (is_archive()) { %>
+      <%- css('css/index.css') %>
+    <% } else if (is_category()) { %>
+      <%- css('css/category.css') %>
+    <% } else if (is_tag()) { %>
+      <%- css('css/tag.css') %>
+    <% } else { %>
+      <%- css('css/index.css') %>
+    <% } %>
+
+
+</head>

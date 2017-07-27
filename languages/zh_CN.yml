@@ -1,0 +1,21 @@
+categories: 分类
+category: 分类
+tag: 标签
+tags: 标签
+about: 关于
+tagcloud: 标签云
+prev: 上一页
+next: 下一页
+comment: 留言
+archive_a: 归档
+archive_b: 归档：%s
+page: 第 %d 页
+recent_posts: 最新文章
+share: 分享
+powered_by: Powered by
+search: 搜索
+searchholder: 搜索文章
+menu:
+  Home: 首页
+  Archives: 归档
+  About: 关于

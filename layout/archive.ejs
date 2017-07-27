@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <div class="row">
+      <!-- left brief profile -->
+      <%- partial('_partial/profile') %>
+
+      <!-- top nav -->
+      <% if (is_home()) { %>
+        <%- partial('_partial/nav', {Name: 'Home'}) %>
+      <% } else if (is_category()) { %>
+        <%- partial('_partial/nav', {Name: 'Category'}) %>
+      <% } else if (is_tag()) { %>
+        <%- partial('_partial/nav', {Name: 'Tag'}) %>
+      <% } else if (is_post()) { %>
+        <%- partial('_partial/nav', {Name: 'Post'}) %>
+      <% } else if (is_archive()) { %>
+        <%- partial('_partial/nav', {Name: 'Archives'}) %>
+      <% } %>
+
+      <div class="blog-achive">
+      <!-- archive list -->
+      <% var lastyear; %>
+      <% page.posts.each(function(post, i){ %>
+        <% var curryear = post.date.year(); %>
+        <% if (lastyear != curryear) { %>
+          <% if (lastyear != null) { %>
+          </div></div>
+          <% } %>
+          <% lastyear = curryear; %>
+            <div class="achive-item">
+              <!-- archive year -->
+              <h3 class="archive-year"><a href="<%- url_for(config.archive_dir + '/' + curryear) %>"><%= curryear %></a></h3>
+              <div class="archive-content">
+
+        <% } %>
+        <%- partial('_partial/archive-post', {post: post}) %>
+      <% }) %>
+      <% if (page.posts.length) { %>
+        </div></div>
+      <% } %>
+
+    </div><!-- end of <div class="blog-achive"> -->
+
+      <!-- pagination -->
+      <%- partial('_partial/pagination')%>
+
+      <!-- footer -->
+      <%- partial('_partial/footer') %>
+    </div>
+</div>
+<%- partial('_partial/after-footer') %>

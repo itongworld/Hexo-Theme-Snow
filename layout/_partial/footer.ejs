@@ -1,0 +1,27 @@
+  <!-- website footer -->
+<% if (is_post()) { %>
+<div class="post-footer">
+  <p class="footer-copyright">&copy;&nbsp;<%= theme.startyear %>&nbsp;-&nbsp;<%- date(Date.now(), 'YYYY') %>&nbsp;<%= theme.owner %></p>
+  <p class="footer-poweredby">Powered by <a href="https://github.com/itongworld"><%= theme.theme_name %></a> and <a href="https://hexo.io/"><%= theme.blogengine_name %></a></p>
+</div>
+
+<!-- qrcode pop-up dialog -->
+<div class="dialog-modal" id="dialog-modal">
+    <a href="javascript:void(0)" title="关闭" id="popup-close"><i class="fa fa-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+        <img src="https://chart.googleapis.com/chart?cht=qr&chs=200x200&choe=UTF-8&chld=L|1&chl=http://weibo.com/ttarticle/p/show?id=2309404054181588669991#_0" alt="二维码生成失败 :(" id="share-qrcode">
+    </div>
+</div>
+
+<!-- global mask -->
+<div class="mask" id="mask"></div>
+
+
+<% } else { %>
+  <div class="section-footer">
+      <p class="footer-copyright">&copy;&nbsp;<%= theme.startyear %>&nbsp;-&nbsp;<%- date(Date.now(), 'YYYY') %>&nbsp;<%= theme.owner %></p>
+      <p class="footer-poweredby">Powered by <a href="https://github.com/itongworld"><%= theme.theme_name %></a> and <a href="https://hexo.io/"><%= theme.blogengine_name %></a></p>
+  </div>
+</div>
+<% } %>

@@ -1,0 +1,21 @@
+<!-- archive item -->
+<!-- 这里有个小BUG： 如果两个行内元素换行书写，那么浏览器显示时，会自动在这两个行内元素间添加一个空格 -->
+<div class="archive-item">
+
+  <!-- item date -->
+  <%
+    var datestr;
+    if (config.language == 'zh_CN') {
+      datestr = '<span>'+date(post.date, 'MM-DD')+'</span>';
+    } else {
+      datestr = '<span>'+date(post.date, 'MMM DD')+'</span>';
+    }
+  %>
+
+  <!-- archive title -->
+  <% if (post.link) { %>
+    <%- datestr %><a href="<%- url_for(post.link) %>" target="_blank"><%= post.title %></a>
+  <% } else { %>
+    <%- datestr %><a href="<%- url_for(post.path) %>" target="_blank"><%- post.title || theme.default_post_title || "Untitled" %></a>
+  <% } %>
+</div>
