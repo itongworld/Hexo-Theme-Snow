@@ -894,6 +894,9 @@ blockquote cite {
 }
 .blog-achive a:hover, .blog-achive a:active, .blog-achive a:focus {
     color: #500095;
+    
+    /* 这里改opacity为1，不然会被index.css第44行opacity：.7覆盖。 */
+    opacity: 1;
     /*text-decoration: underline;*/
 }
 

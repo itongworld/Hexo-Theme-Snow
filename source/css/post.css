@@ -459,6 +459,9 @@ blockquote cite {
     border-left: 1px solid #500095;
     background-color: transparent;
     padding-left: 14px;
+    
+    /* 这里改opacity为1，不然会被post.css第81行opacity：.7覆盖。 */
+    opacity: 1;
 
 }
 
@@ -471,6 +474,9 @@ blockquote cite {
     border-left: 1px solid #500095;
     background-color: transparent;
     padding-left: 39px;
+
+    /* 这里改opacity为1，不然会被post.css第81行opacity：.7覆盖。 */
+    opacity: 1;
 }
 
 
@@ -483,6 +489,9 @@ blockquote cite {
     background-color: transparent;
     padding-left: 13px;
     font-weight: bold;
+
+    /* 这里改opacity为1，不然会被post.css第81行opacity：.7覆盖。 */
+    opacity: 1;
 }
 
 .post-toc .nav .nav-child li.active > a,
@@ -495,6 +504,9 @@ blockquote cite {
     background-color: transparent;
     padding-left: 38px;
     font-weight: 500;
+
+    /* 这里改opacity为1，不然会被post.css第81行opacity：.7覆盖。 */
+    opacity: 1;
 }
 
 
