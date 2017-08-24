@@ -674,9 +674,12 @@ blockquote cite {
 .blog-post .post-content h3 {
 
 }
+
+/*index line-height: 1.8*/
 .blog-post .post-content p {
-    line-height: 2;
-    text-align: justify;
+    line-height: 1.8;
+    letter-spacing: .4px;
+    /*text-align: justify;*/
 }
     /* -------------------------------------------------------------------- */
 .blog-post .post-footer {

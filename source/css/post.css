@@ -69,6 +69,8 @@ body{
 p {
     margin: 0 0 15px;
     font-size: 16px;
+    
+
 }
 
 a {
@@ -622,11 +624,11 @@ blockquote cite {
     padding-bottom: 10px;
 }
 
-
+/*post line-height 1.7*/
 .post-container .post-content p{
-    line-height: 2;
+    line-height: 1.7;
     text-align: justify;
-
+    letter-spacing: .3px;
     /* default margin-bottom:10px */
     /*margin-bottom: 15px;*/
 
