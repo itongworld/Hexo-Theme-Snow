@@ -49,7 +49,7 @@ a:active, a:hover, a:focus {
 }
 
 blockquote {
-    
+
 }
 
 blockquote p {
@@ -140,6 +140,29 @@ blockquote cite {
     font-size: 22px;
 }
 
+.blockquote-font:before {
+    content: '“';
+    font-size: 6rem;
+    position: absolute;
+    top: 0.2em;
+    left: -.5em;
+    /*top: .01em;*/
+    /*left: -.5em;*/
+    color: #ddd;
+    font-family: SimHei, sans-serif;
+}
+
+.blockquote-font:after {
+    content: '”';
+    font-size: 6rem;
+    position: absolute;
+    bottom: -.4em;
+    right: -.5em;
+    /*bottom: -.5em;*/
+    /*right: -.4em;*/
+    color: #ddd;
+    font-family:SimHei, sans-serif;
+}
 
 /* blockquote-font style */
 @media screen and (max-width: 1199px) {
@@ -261,6 +284,30 @@ blockquote cite {
         font-size: 20px;
     }
 
+    .blockquote-font:before {
+        content: '“';
+        font-size: 5rem;
+        position: absolute;
+        top: 0.2em;
+        left: -.5em;
+        /*top: .01em;*/
+        /*left: -.5em;*/
+        color: #ddd;
+        font-family: SimHei, sans-serif;
+    }
+
+    .blockquote-font:after {
+        content: '”';
+        font-size: 5rem;
+        position: absolute;
+        bottom: -.4em;
+        right: -.5em;
+        /*bottom: -.5em;*/
+        /*right: -.4em;*/
+        color: #ddd;
+        font-family:SimHei, sans-serif;
+    }
+
 
     .section-profile .logo-image {
         padding-top: 50px;
@@ -317,6 +364,29 @@ blockquote cite {
         font-size: 18px;
     }
 
+    .blockquote-font:before {
+        content: '“';
+        font-size: 4rem;
+        position: absolute;
+        top: 0.2em;
+        left: -.5em;
+        /*top: .01em;*/
+        /*left: -.5em;*/
+        color: #ddd;
+        font-family: SimHei, sans-serif;
+    }
+
+    .blockquote-font:after {
+        content: '”';
+        font-size: 4rem;
+        position: absolute;
+        bottom: -.4em;
+        right: -.5em;
+        /*bottom: -.5em;*/
+        /*right: -.4em;*/
+        color: #ddd;
+        font-family:SimHei, sans-serif;
+    }
 
 
     .section-profile .logo-image {
