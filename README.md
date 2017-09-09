@@ -8,7 +8,7 @@ And another reason motivating me to finish the project is that I enjoy designing
 Although Snow is just a theme based on [Hexo](https://hexo.io/), but still is a step moving forward my little dream❤❤.
 
 
-By the way, Snow does not means John Snow, it represents purity and rarity.
+By the way, Snow does not mean John Snow, it represents purity and rarity.
 
 
 
