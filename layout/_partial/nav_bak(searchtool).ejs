@@ -16,7 +16,14 @@
 
 
             <div id="bs-example-navbar-collapse-1" class="navbar-collapse collapse">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="<%- __('searchholder') %>">
+                    </div>
+                    <button type="submit" class="btn btn-default"><%- __('search') %></button>
+                </form>
                 <ul class="nav navbar-nav navbar-right">
+
                   <% for (var i in theme.menu){ %>
                       <% if (i == Name) {%>
                         <li><a href="<%- url_for(theme.menu[i]) %>" class="current"><%- __('menu.' + i) %></a></li>

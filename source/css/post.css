@@ -1,6 +1,12 @@
 @charset "utf-8";
 @import 'fonts.css';
 @import 'code.css';
+/***
+ *** author OUYANGTONG
+ *** This style file is used by post page to control its appearance.
+***/
+
+
 * {
     outline: none;
 }
@@ -11,11 +17,6 @@ html, body {
 
 body{
     /* 网站默认正文字体 */
-    /*font-family: -apple-system, BlinkMacSystemFont,*/
-    /*"Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",*/
-    /*"Fira Sans", "Droid Sans", "Helvetica Neue",*/
-    /*sans-serif;*/
-
     /*font-family: "Microsoft YaHei", 宋体, sans-serif;*/
     /*font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;*/
     /*font-family: PingHei,'PingFang SC',Helvetica Neue,'Work Sans','Hiragino Sans GB','Microsoft YaHei',SimSun,sans-serif;*/
@@ -24,9 +25,8 @@ body{
 
     /*font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;*/
     /*font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;*/
-
-
-    font-family: "Microsoft YaHei", 宋体, sans-serif;
+    
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
 
     /* 网站默认字体颜色 */
     color: #414141;
@@ -65,18 +65,16 @@ body{
     padding-left: 0;
 }
 
-
 p {
     margin: 0 0 15px;
     font-size: 16px;
-    
-
 }
 
 a {
     text-decoration: none;
     color: #500095;
 }
+
 a:active, a:hover, a:focus {
     text-decoration: none;
     color: #500095;
@@ -92,7 +90,6 @@ blockquote p {
 blockquote cite {
     margin-left: 10px;
     margin-right: 10px;
-    /*font-style: normal;*/
     font-weight: bold;
 }
 
@@ -152,26 +149,23 @@ blockquote cite {
  * post page
  *
  */
-
 /* ---------------------------------------------------------------------------------------------------- */
-/* post header style */
+/* post banner style */
 /* ---------------------------------------------------------------------------------------------------- */
 .post-banner{
     position: relative;
-    min-height: 250px;
+    min-height: 300px;
 
     height: 50%;
 }
-
-
 .banner-background{
     width:100%;
     height:100%;
     background-size: cover;
     background-position: top, center;
-    background-image: url('../images/banner.jpg');
     position: absolute;
     z-index: -9;
+
     /*-webkit-filter: blur(2px);*/
     /*-moz-filter: blur(2px);*/
     /*-ms-filter: blur(2px);*/
@@ -179,7 +173,6 @@ blockquote cite {
 }
 
 
-/* 响应式设计 */
 .post-title {
     /* 绝对定位的元素居中 */
 
@@ -197,48 +190,57 @@ blockquote cite {
     /*transform: translate(0, -100%);    !* 50%为自身尺寸的一半 *!*/
     /*text-align: center;*/
 
-
-
-    /*width: 60%;*/
     width: 50%;
     position: absolute;
     left: 50%;
     top: 40%;
     color: #fefefe;
     transform: translate(-50%, -100%);    /* 50%为自身尺寸的一半 */
-    /*letter-spacing: 1px;*/
-
-
 }
 
 .post-title h1, .post-title .h1{
     /* default h1 font size 36px */
     text-transform: uppercase;
-    font-family: "CALSON-BOLD", 'Microsoft YaHei', sans-serif;
+    font-family: CASLON, 'Microsoft YaHei', sans-serif;
     font-size: 38px;
-    line-height: 1.3;
-
+    font-weight: bold;
+    line-height: 1.2;
+    
     padding-top: 0;
     padding-bottom: 0;
 
+    letter-spacing: 1px;
+
+    /* display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden; */
+
 }
 
-
 .post-title .post-meta {
-    padding-top: 5px;
+    padding-top: 10px;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    
 }
 
 .post-title .post-meta .meta-entity {
-    font-size: 19px;
+    letter-spacing: .4px;
     text-transform: uppercase;
 }
-
+.post-title .post-meta .meta-date {
+    font-size: 20px;
+    font-family: AVERIASERIFLIBRE, sans-serif;
+}
 .post-title .post-meta .meta-tags {
-    font-size: 19px;
+    font-size: 18px;
     text-transform: uppercase;
-    padding-left: 20px;
-    padding-right: 20px;
-
+    padding-left: 25px;
+    padding-right: 25px;
+    font-family: "Microsoft YaHei", sans-serif;
 }
 
 .post-title .post-meta .meta-tags a {
@@ -251,157 +253,58 @@ blockquote cite {
     opacity: 0.7;
 }
 
+
+
+/* 响应式设计 */
 @media screen and (max-width: 1199px) {
     .post-title {
-
+        /* 8/12=0.66...66667 */
         width: 66.666%;
         position: absolute;
         left: 50%;
         top: 40%;
         color: #fefefe;
         transform: translate(-50%, -100%);    /* 50%为自身尺寸的一半 */
-
-
     }
 }
+
 
 @media screen and (max-width: 991px) {
-    .post-title {
 
-        width: 66.666%;
-        position: absolute;
-        left: 50%;
-        top: 40%;
-        color: #fefefe;
-        transform: translate(-50%, -100%);    /* 50%为自身尺寸的一半 */
-
-
-    }
-
-    .post-title h1, .post-title .h1{
-        /* default h1 font size 36px */
-        text-transform: uppercase;
-        font-family: "CALSON-BOLD";
-        /*font-size: 38px;*/
-
-        font-size: 30px;
-        line-height: 1.3;
-        padding-top: 0;
-        padding-bottom: 0;
-
-    }
-
-    .post-title .post-meta {
-        padding-top: 3px;
-    }
-
-    .post-title .post-meta .meta-entity {
-        /*font-size: 19px;*/
-        font-size: 15px;
-        text-transform: uppercase;
-    }
-
-    .post-title .post-meta .meta-tags {
-        /*font-size: 19px;*/
-        font-size: 15px;
-        text-transform: uppercase;
-        /*padding-left: 20px;*/
-        /*padding-right: 20px;*/
-        padding-left: 18px;
-        padding-right: 18px;
-
-    }
-
-    .post-title .post-meta .meta-tags a {
-        text-decoration: none;
-        color: #fefefe;
-        /*padding-left: 5px;*/
-        /*padding-right: 5px;*/
-        padding-left: 4px;
-        padding-right: 4px;
-    }
-    .post-title .post-meta .meta-tags a:hover, .post-title .post-meta .meta-tags a:active, .post-title .post-meta .meta-tags a:focus {
-        opacity: 0.7;
-    }
 }
+
 
 @media screen and (max-width: 767px) {
     .post-title {
-
-        width: 66.666%;
+        width: 75%;
         position: absolute;
         left: 50%;
         top: 40%;
         color: #fefefe;
         transform: translate(-50%, -100%);    /* 50%为自身尺寸的一半 */
 
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
 
     }
 
-    .post-title h1, .post-title .h1{
-        /* default h1 font size 36px */
-        text-transform: uppercase;
-        font-family: "CALSON-BOLD";
-        /*font-size: 38px;*/
-
-        font-size: 22px;
-        line-height: 1.3;
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-
-    .post-title .post-meta {
-        padding-top: 0;
-    }
-
-
-    .post-title .post-meta .meta-entity {
-        /*font-size: 19px;*/
-        font-size: 11px;
-        text-transform: uppercase;
-    }
-
-    .post-title .post-meta .meta-tags {
-        /*font-size: 19px;*/
-        font-size: 11px;
-        text-transform: uppercase;
-        /*padding-left: 20px;*/
-        /*padding-right: 20px;*/
-        padding-left: 12px;
-        padding-right: 12px;
-
-    }
-
-    .post-title .post-meta .meta-tags a {
-        text-decoration: none;
-        color: #fefefe;
-        /*padding-left: 5px;*/
-        /*padding-right: 5px;*/
-        padding-left: 3px;
-        padding-right: 3px;
-    }
-    .post-title .post-meta .meta-tags a:hover, .post-title .post-meta .meta-tags a:active, .post-title .post-meta .meta-tags a:focus {
-        opacity: 0.7;
-    }
 }
+
 
 
 
 /* ---------------------------------------------------------------------------------------------------- */
 /* post toc style */
 /* ---------------------------------------------------------------------------------------------------- */
-/* TODO */
-/* 响应式设计 */
 .f {
     position: fixed;
     top: 0;
     bottom: 0;
-
 }
 .post-toc {
     margin-top: 80px;
     margin-left: 60px;
-    /*margin-top: 82px;*/
 
 }
 .post-toc ol {
@@ -411,7 +314,6 @@ blockquote cite {
     margin: 0;
     padding: 0;
 }
-
 
 /* 重写bootstrap样式 */
 /*.nav-stacked>li+li {*/
@@ -423,7 +325,6 @@ blockquote cite {
     margin: 0;
 }
 
-
 .post-toc .nav .nav-item {
     
 }
@@ -434,7 +335,10 @@ blockquote cite {
 /* bootstrap中.nav>li>a的默认样式 */
 /* position:relative; display:block; padding:10px 15px; */
 .post-toc .nav li > a {
-    padding: 3px 15px;
+    padding-top: 3px;
+    padding-right: 50px;
+    padding-bottom: 3px;
+    padding-left: 15px;
 
     /*margin: 10px 0;*/
     text-decoration: none;
@@ -445,13 +349,17 @@ blockquote cite {
 
 }
 .post-toc .nav .nav-child li > a{
-    padding: 1px 40px;
+    padding-top: 3px;
+    padding-right: 50px;
+    padding-bottom: 3px;
+    padding-left: 30px;
+
     /*margin: 10px 0;*/
     text-decoration: none;
     color: #747474;
     font-weight: 500;
     display: block;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .post-toc .nav li.nav-item > a:hover,
@@ -467,7 +375,6 @@ blockquote cite {
 
 }
 
-
 .post-toc .nav .nav-child li.nav-item > a:hover,
 .post-toc .nav .nav-child li.nav-item > a:focus,
 .post-toc .nav .nav-child li.nav-item > a:active
@@ -475,7 +382,7 @@ blockquote cite {
     color: #500095;
     border-left: 1px solid #500095;
     background-color: transparent;
-    padding-left: 39px;
+    padding-left: 29px;
 
     /* 这里改opacity为1，不然会被post.css第81行opacity：.7覆盖。 */
     opacity: 1;
@@ -504,24 +411,19 @@ blockquote cite {
     color: #500095;
     border-left: 2px solid #500095;
     background-color: transparent;
-    padding-left: 38px;
+    padding-left: 28px;
     font-weight: 500;
 
     /* 这里改opacity为1，不然会被post.css第81行opacity：.7覆盖。 */
     opacity: 1;
 }
-
-
-
 .post-toc .nav .nav-level-2 {
     
 }
 
-
 .post-toc .nav .nav-level-3 {
     
 }
-
 
 /* commenting styles below can explicitly displays level-3 toc */
 /* hide inactive nested list */
@@ -536,13 +438,14 @@ blockquote cite {
 
 
 
-
-
+/* 响应式设计 */
 @media screen and (max-width: 1199px) {
     .post-toc {
-        visibility: hidden;
+        /* 不占用空间 */
+        display: none;
     }
 }
+
 
 
 
@@ -578,11 +481,14 @@ blockquote cite {
     border-radius: 4px;*/
 }
 
+
+/* 响应式设计 */
 @media screen and (max-width: 767px) {
     .post-container .post-content img {
         padding: 1px;
     }
 }
+
 
 
 /* ---------------------------------------------------------------------------------------------------- */
@@ -592,7 +498,7 @@ blockquote cite {
     color: #414141;
 }
 .post-container .post-content {
-    margin: 80px 0 100px;
+    margin: 100px 0 100px;
     position: relative;
 }
 .post-container .post-content h1, .post-container .post-content .h1 {
@@ -628,7 +534,6 @@ blockquote cite {
 .post-container .post-content p{
     line-height: 1.7;
     text-align: justify;
-    letter-spacing: .3px;
     /* default margin-bottom:10px */
     /*margin-bottom: 15px;*/
 
@@ -636,16 +541,6 @@ blockquote cite {
     font-size: 15px;
     /*color: #747474;*/
 }
-
-/*.post-container .post-content a {
-    text-decoration: none;
-    color: #500095;
-
-}
-
-.post-container .post-content a:hover {
-    opacity: .7;
-}*/
 
 
 .post-container .post-share {
@@ -729,19 +624,11 @@ blockquote cite {
 /* ---------------------------------------------------------------------------------------------------- */
 .post-footer {
     text-align: center;
-    padding-top: 250px;
+    padding-top: 450px;
     padding-bottom: 40px;
 
 
 }
-
-/*.post-footer a {
-    text-decoration: none;
-    color: #500095;
-}
-.post-footer a:hover {
-    opacity: .7;
-}*/
 
 .post-footer .footer-copyright {
     color: #888;

@@ -1,14 +1,20 @@
-@charset "UTF-8";
+@charset "utf-8";
 @import 'fonts.css';
 @import 'code.css';
+/***
+ *** author OUYANGTONG
+ *** This style file is used by index, archive, about pages to control their appearance.
+***/
+
 
 * {
     outline: none;
+    
 }
 
 body{
     /* 网站默认正文字体 */
-    font-family: "Microsoft YaHei", 宋体, sans-serif;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
 
     /* 网站默认字体颜色 */
     color: #414141;
@@ -19,8 +25,8 @@ body{
 }
 
 
-/* bootstrap中的h1~h6设置了不同的上下外边距 */
-/* 重写h1~h6的上下外边距，其他属性可以保持不变 */
+/* bootstrap中h1~h6设置了不同的上下外边距 */
+/* 重写h1~h6上下外边距，其他属性可以保持不变 */
 /* margin-top:20px; margin-bottom:10px */
 .h1, .h2, .h3, h1, h2, h3 {
     margin-top: 20px;
@@ -42,27 +48,27 @@ a {
     text-decoration: none;
     color: #500095;
 }
+
 a:active, a:hover, a:focus {
     text-decoration: none;
     color: #500095;
     opacity: .7;
 }
 
+
+
+
 blockquote {
     
 }
-
 blockquote p {
     font-style: italic;
 }
 blockquote cite {
     margin-left: 10px;
     margin-right: 10px;
-    /*font-style: normal;*/
     font-weight: bold;
 }
-
-
 .post-content>table {
     width: 100%;
     max-width: 100%;
@@ -77,7 +83,6 @@ blockquote cite {
 .post-content>table td {
     text-align: left;
 }
-
 .post-content>table>tbody>tr>td, .post-content>table>tbody>tr>th, .post-content>table>tfoot>tr>td, .post-content>table>tfoot>tr>th, .post-content>table>thead>tr>td, .post-content>table>thead>tr>th {
     padding: 8px;
     line-height: 1.42857143;
@@ -91,27 +96,21 @@ blockquote cite {
     /*border-bottom-width: 2px;*/
 
 }
-
 .post-content>table>thead>tr>td {
     border-bottom-width: 2px;
 }
-
 .post-content>table>caption+thead>tr:first-child>td, .post-content>table>caption+thead>tr:first-child>th, .post-content>table>colgroup+thead>tr:first-child>td, .post-content>table>colgroup+thead>tr:first-child>th, .post-content>table>thead:first-child>tr:first-child>td, .post-content>table>thead:first-child>tr:first-child>th {
     border-top: 0
 }
-
 .post-content>table>tbody+tbody {
     border-top: 2px solid #ddd
 }
-
 .post-content>table table {
     background-color: #fff
 }
-
 .post-content>table>tbody>tr:nth-of-type(odd) {
     background-color: #f9f9f9
 }
-
 
 
 
@@ -128,33 +127,23 @@ blockquote cite {
     text-align: center;
     line-height: 1.6em;
     color: #414141;
+
+    padding-top: 15px;
     padding-left: 45px;
     padding-right: 45px;
-    padding-top: 45px;
     padding-bottom: 45px;
     width: 100%;
+
     /*overflow: hidden;*/
     /*white-space: nowrap;*/
     /*text-overflow: ellipsis;*/
-    font-family: SIGNATURE_EN, SIGNATURE_ZH_CH, Helvetica, sans-serif;
+    font-family: SHRIKHAND, FANGZHENG-ZHENGCUHEI, sans-serif;
     font-size: 22px;
 }
 
-
-/* blockquote-font style */
-@media screen and (max-width: 1199px) {
-    .blockquote-font {
-        visibility: hidden;
-    }
-}
-
-/*
- * section-profile
- */
 /* Hide for mobile */
 /* 这里测试发现要比md 992px 少一个像素，不然会出现section-profile已经隐藏但col-md-offset-3样式依旧存在*/
 /* max-width包含值，是小于等于执行，min-width不包含值，是大于执行 */
-
 .section-profile {
     position: fixed;
     /*top: 0;*/
@@ -172,31 +161,31 @@ blockquote cite {
     border-right: 1px solid #eee;
 }
 
-@media screen and (max-width: 991px) {
-    .section-profile {
-        /*display: none;*/
-        visibility: hidden;
-    }
-}
-
-
-/* 全尺寸样式放在前面，不然媒体查询样式会失效，因为这里有同名属性样式会进行覆盖，所以样式顺序至关重要！ */
+/* 高尺寸样式放在前面，不然媒体查询样式会失效，因为这里有同名属性样式会进行覆盖，所以样式顺序至关重要！ */
 .section-profile .logo-image {
-    padding-top: 60px;
-}
-
-@media screen and (max-width: 1199px) {
-    .section-profile .logo-image {
-        padding-top: 150px;
-    }
+    padding-top: 77px;
 }
 
 .section-profile .logo-image img {
-    width: 135px;
-    height: 135px;
+    width: 145px;
+    height: 145px;
     object-fit: cover;
 }
 
+.section-profile .profile-nickname {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    /* h4 default font-size is 18px */
+    font-size: 20px;
+    
+    font-family: AVERIASERIFLIBRE, "Microsoft YaHei", sans-serif;
+    font-weight: bold;
+    line-height: 1.3em;
+}
 
 .section-profile .socal-links {
     text-align: center;
@@ -204,7 +193,6 @@ blockquote cite {
     bottom: 0;
     left: 0;
     right: 0;
-    /*margin-top: 50px;*/
     margin-bottom: 50px;
 
     /* 调整社交图标大小 */
@@ -222,188 +210,24 @@ blockquote cite {
 }
 
 
-.section-profile .profile-nickname {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 35px;
-
-    /* h4 default font-size is 18px */
-    font-size: 18px;
-
-    /* 默认为YaHei字体 */
-    /*font-family: AVERIA_SERIF_LIBRE, DIN, Helvetica, sans-serif;*/
-}
-
-/*---------------------------------------------------------------------*/
-/* 这里涉及页面高度适配问题 */
-/* 一般而言，媒体查询是页面适配的优秀解决方案。除此之外，也可以使用em/rem单位来解决此问题 */
-/* 但一般的页面适配问题都是指页面宽度不同的适配，由于页面可以上下滚动，所以很少涉及页面高度的适配 */
-/* 但index页面因为左侧的profile区设置position:fixed;height:100%，因而需要考虑profile区的高度适配 */
-/* 这里仅需要对左侧区和页面footer区高度适配，因此采用媒体查询方案 */
-/*---------------------------------------------------------------------*/
-
-/* 页面高度适配 */
-@media screen and (max-height: 900px) {
+/* 响应式设计 */
+@media screen and (max-width: 1199px) {
     .blockquote-font {
-        position: relative;
-        text-align: center;
-        line-height: 1.5em;
-        color: #414141;
-        padding-left: 45px;
-        padding-right: 45px;
-        padding-top: 45px;
-        padding-bottom: 45px;
-        width: 100%;
-        /*overflow: hidden;*/
-        /*white-space: nowrap;*/
-        /*text-overflow: ellipsis;*/
-        font-family: SIGNATURE_EN, SIGNATURE_ZH_CH, Helvetica, sans-serif;
-        font-size: 20px;
+        /* 不占用空间 */
+        display: none;
+
+        /* 占用空间 */
+        /* visibility: hidden */
     }
-
-
-    .section-profile .logo-image {
-        padding-top: 50px;
-    }
-
-    .section-profile .logo-image img {
-        width: 120px;
-        height: 120px;
-        object-fit: cover;
-    }
-
-    .section-profile .socal-links {
-        text-align: center;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        /*margin-top: 50px;*/
-        margin-bottom: 20px;
-
-        /* 调整社交图标大小 */
-        font-size: 12px;
-
-    }
-    .section-profile .profile-nickname {
-        text-align: center;
-        padding-top: 15px;
-        padding-bottom: 25px;
-
-        /* h4 default font-size is 18px */
-        font-size: 16px;
-
-        /* 默认为YaHei字体 */
-        /*font-family: DIN, Helvetica， sans-serif;*/
-    }
-
-}
-
-@media screen and (max-height: 760px) {
-    .blockquote-font {
-        position: relative;
-        text-align: center;
-        line-height: 1.4em;
-        color: #414141;
-        padding-left: 50px;
-        padding-right: 50px;
-        padding-top: 35px;
-        padding-bottom: 35px;
-        width: 100%;
-        /*overflow: hidden;*/
-        /*white-space: nowrap;*/
-        /*text-overflow: ellipsis;*/
-        font-family: SIGNATURE_EN, SIGNATURE_ZH_CH, Helvetica, sans-serif;
-        font-size: 18px;
-    }
-
-
-
-    .section-profile .logo-image {
-        padding-top: 30px;
-    }
-
-    .section-profile .logo-image img {
-        width: 95px;
-        height: 95px;
-        object-fit: cover;
-    }
-
-    .section-profile .socal-links {
-        text-align: center;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        /*margin-top: 50px;*/
-        margin-bottom: 15px;
-
-        /* 调整社交图标大小 */
-        font-size: 11px;
-
-    }
-    .section-profile .profile-nickname {
-        text-align: center;
-        padding-top: 7px;
-        padding-bottom: 7px;
-
-        /* h4 default font-size is 18px */
-        font-size: 13px;
-
-        /* 默认为YaHei字体 */
-        /*font-family: DIN, Helvetica， sans-serif;*/
-    }
-
-}
-
-@media screen and (max-height: 630px) {
-    .blockquote-font {
-        visibility: hidden;
-    }
-
+    
     .section-profile .logo-image {
         padding-top: 150px;
     }
-
-
-    .section-profile .logo-image img {
-        width: 140px;
-        height: 140px;
-        object-fit: cover;
-    }
-
-    .section-profile .profile-nickname {
-        text-align: center;
-        padding-top: 20px;
-        padding-bottom: 40px;
-
-        /* h4 default font-size is 18px */
-        font-size: 18px;
-
-        /* 默认为YaHei字体 */
-        /*font-family: DIN, Helvetica， sans-serif;*/
-    }
-    .section-profile .socal-links {
-        text-align: center;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        /*margin-top: 50px;*/
-        margin-bottom: 20px;
-
-        /* 调整社交图标大小 */
-        font-size: 12px;
-
-    }
-
-
 }
 
-@media screen and (max-height: 600px) {
-    .section-profile .socal-links {
-        visibility: hidden;
-
+@media screen and (max-width: 991px) {
+    .section-profile {
+        display: none;
     }
 }
 
@@ -418,13 +242,13 @@ blockquote cite {
     padding-right: 0;
 
     /* 导航条的默认高度为50px */
-    padding-top: 61px;
+    padding-top: 65px;
+
 }
 
 .section-posts nav.navbar {
 
     /* 修改导航条的高度，导航条默认高度为50px */
-    /* 此处高度修改为64px，加上1px的border-bottom */
     /* 考虑到current样式高度，因此不在这里设置导航条高度 */
     /*padding-top: 7px;*/
     /*padding-bottom: 7px;*/
@@ -441,8 +265,6 @@ blockquote cite {
     margin-bottom: 0;
 }
 
-
-/* 响应式布局样式 */
 .section-posts .navbar-toggle .icon-bar {
     background-color: #500095;
 }
@@ -451,14 +273,14 @@ blockquote cite {
     /*border-color: #fefefe;*/
     /*border: 1px solid #fefefe;*/
     border-color: #fefefe;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
-
 
 .section-posts .navbar-header .navbar-toggle:hover, .section-posts .navbar-header .navbar-toggle:focus, .section-posts .navbar-header .navbar-toggle:active {
     background-color: #f9f5ff;
     /*border-color: #f9f5ff;*/
     /*border: 1px solid #eee;*/
-
     border-color: #eee;
 }
 
@@ -466,23 +288,21 @@ blockquote cite {
     display: none;
 }
 
-
 .nav>li>a{
     color: #414141;
 
-    /* 重写padding 15px宽度 */
-    /*padding-left: 10px;*/
-    /*padding-right: 10px;*/
-    /*margin-left: 5px;*/
-    /*margin-right: 5px;*/
-
-    padding-top: 20px;
-    padding-bottom: 16px;
+    padding-top: 22px;
+    padding-bottom: 18px;
+    padding-left: 17px;
+    padding-right: 17px;
+    font-size: 15px;
+    /* line-height: 21px; */
 }
 
 .nav>li>a.current {
     color: #500095;
     border-bottom: 4px solid #500095;
+
     background-color: #f9f5ff;
 }
 
@@ -493,33 +313,29 @@ blockquote cite {
     opacity: 1;
 }
 
-
-
 .navbar-collapse>.navbar-form {
-    /* 重写导航表单的上下内补，精致计算以使整个表单垂直居中 */
+    /* 重写导航表单的上下内补，使用精准计算以使整个表单垂直居中 */
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
-/* 重写响应式导航条样式 */
+
+
+
+/* 响应式设计 */
 @media screen and (max-width: 767px) {
-    .nav>li>a{
-        color: #414141;
-        padding-top: 14px;
-        padding-bottom: 14px;
+    .nav>li>a {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 18px;
+        padding-right: 18px;
     }
 
     .nav>li>a:focus, .nav>li>a:hover, .nav>li>a:active {
-        color: #500095;
-        background-color: #f9f5ff;
         border-bottom: 0;
-        opacity: 1;
     }
 
     .nav>li>a.current {
-        color: #500095;
-        background-color: #f9f5ff;
-
         /* 重写导航选项border-bottom样式，一定要重写border-bottom进行覆盖，不然还是4pxborder-bottom */
         border-bottom: 0;
     }
@@ -530,27 +346,33 @@ blockquote cite {
         padding-top: 10px;
         padding-bottom: 12px;
 
-        /* 只对响应式导航条form重写margin top bottom 8px样式 */
         margin-top: 0;
         margin-bottom: 0;
 
     }
 
     .navbar-collapse>.navbar-nav {
-        /* 只对响应式导航条ul重写margin top bottom 7.5px样式 */
         margin-top: 0;
         margin-bottom: 0;
     }
 
     .section-posts .navbar-header a.navbar-brand {
         display: block;
-        /* 使得响应式导航条中nickname左宽与菜单icon右宽26px一致 */
-        margin-left: 11px;
-        margin-right: 11px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 7px;
+        margin-bottom: 7px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 50%;
+        font-family: AVERIASERIFLIBRE, "Microsoft YaHei", sans-serif;
+        font-weight: bold;
 
     }
 
 }
+
 
 
 
@@ -562,14 +384,13 @@ blockquote cite {
     margin-right: 55px;
     margin-bottom: 70px;
     margin-left: 55px;
-    /*background-color: #fff;*/
 }
 
 
 /* -------------------------------------------------------------------- */
 .blog-post .post-header {
     /* 首页标题字体英文CALSON，中文宋体 */
-    font-family: CALSON_REGULAR, 宋体, sans-serif;
+    font-family: CASLON-REGULAR, 宋体, sans-serif;
     color: #414141;
     text-transform: uppercase;
 }
@@ -592,10 +413,8 @@ blockquote cite {
     opacity: 1;
 }
 
-/* -------------------------------------------------------------------- */
 .blog-post .post-content {
-
-    /* 非对称设计 */
+    /* 上下内补非对称设计 */
     padding-top: 10px;
     padding-bottom: 80px;
     color: #747474;
@@ -617,13 +436,12 @@ blockquote cite {
     letter-spacing: .4px;
     /*text-align: justify;*/
 }
-    /* -------------------------------------------------------------------- */
+
 .blog-post .post-footer {
     padding: 0 0 70px;
     border-bottom: 1px solid #eee;
 }
 
-/* -------------------------------------------------------------------- */
 .blog-post .post-footer .post-meta {
 
 }
@@ -631,7 +449,7 @@ blockquote cite {
 
 .blog-post .post-footer .post-meta .meta-entity {
     margin-right: 35px;
-
+    letter-spacing: .4px;
 
 }
 
@@ -655,7 +473,7 @@ blockquote cite {
 }
 
 .blog-post img {
-    /*九宫格实现*/
+    
     /*一个没有实现的想法是，在维持图片宽高相等的状态下，如何让图片动态裁剪，即尺寸不同，照片裁剪的内容也不同*/
     /*这一点在高度不使用js控制的情况下（比如，height: 400px;），可以通过object-fit: cover实现，但是使用js动态设置高度后，就失效了*/
 
@@ -683,11 +501,16 @@ blockquote cite {
     border-radius: 4px;*/
 }
 
+
+/* 响应式设计 */
 @media screen and (max-width: 767px) {
+
     .blog-post img {
         padding: 1px;
     }
 }
+
+
 
 /* ---------------------------------------------------------------------------------------------------- */
 /* pagination style */
@@ -700,29 +523,11 @@ blockquote cite {
     /*为了和about页面的样式同一*/
     padding-bottom: 0px;
 
-
 }
 
 .section-posts nav.paginator .pager {
     /* pager类有text-align:center样式 */
     text-align: right;
-
-}
-
-@media screen and (max-width: 767px) {
-    .section-posts nav.paginator {
-        padding-top: 80px;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-bottom: 20px;
-
-
-    }
-    .section-posts nav.paginator .pager {
-        /* pager类有text-align:center样式 */
-        text-align: center;
-
-    }
 }
 
 .section-posts nav.paginator .pager>li>a {
@@ -754,6 +559,24 @@ blockquote cite {
 }
 
 
+
+/* 响应式设计 */
+@media screen and (max-width: 767px) {
+    .section-posts nav.paginator {
+        padding-top: 80px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+
+    }
+    .section-posts nav.paginator .pager {
+        /* pager类有text-align:center样式 */
+        text-align: center;
+
+    }
+}
+
+
 /* ---------------------------------------------------------------------------------------------------- */
 /* footer style */
 /* ---------------------------------------------------------------------------------------------------- */
@@ -777,6 +600,54 @@ blockquote cite {
 }
 
 
+
+/* 响应式设计 */
+@media screen and (max-height: 714px) {
+    .section-profile .logo-image {
+        /* padding-top: 77px; */
+        padding-top: 55px;
+    }
+
+    .section-profile .logo-image img {
+        /* width: 145px;
+        height: 145px; */
+        width: 115px;
+        height: 115px;
+        object-fit: cover;
+    }
+
+    .section-profile .profile-nickname {
+        padding-top: 7px;
+        font-size: 18px;
+    }
+
+    .blockquote-font {
+        padding-left: 30px;
+        padding-right: 30px;
+
+        /* font-size: 22px; */
+    }
+}
+
+/* 思考css代码的执行顺序 */
+/* 1920*1080和1366*768的区别是屏幕高度不同 */
+/* 1920*1080不能和1366*768公用一个(max-width: 1199px)设置 */
+/* @media screen and (max-width: 1199px) and (max-height: 714px)可以为1366*768单独设置样式，实现1920*1080和1366*768样式独立。 */
+/* 否则1920*1080使用的是1366*768的样式 */
+@media screen and (max-width: 1199px) and (max-height: 714px) {
+    .blockquote-font {
+        display: none;
+    }
+    .section-profile .logo-image {
+        /* padding-top: 55px; */
+        padding-top: 150px;
+    }
+    
+}
+
+
+
+
 /*
  *
  * archive page
@@ -786,22 +657,27 @@ blockquote cite {
 /* archive style */
 /* ---------------------------------------------------------------------------------------------------- */
 .blog-achive {
-    margin-top: 30px;
-    margin-left: 220px;
-    margin-right: 275px;
+    margin-top: 100px;
+    margin-left: 250px;
+    margin-right: 250px;
 }
 .blog-achive .achive-item {
-    margin-bottom: 70px;
+    margin-bottom: 170px;
 }
 
 
 .blog-achive .archive-year {
-    font-size: 30px;
-    font-family: FUTURA, DIN_BOLD, CALSON-BOLD, 宋体, sans-serif;
-    color: #414141;
+    font-size: 40px;
+    font-family: AVERIASERIFLIBRE, sans-serif;
     font-weight: bold;
-    padding-top: 45px;
+    color: #414141;
+    padding-top: 20px;
     padding-bottom: 20px;
+
+    /* margin外间隔可以相互重叠，共享区域 */
+    /* padding内间补不可以相互重叠，共享区域 */
+    margin-top: 25px;
+    margin-bottom: 50px;
 }
 
 
@@ -811,20 +687,26 @@ blockquote cite {
 
 
 .blog-achive .archive-content .archive-item {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-size: 18px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 20px;
+
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    letter-spacing: .4px;
 }
 
 
-.blog-achive .archive-content span {
+.blog-achive .archive-content .archive-item span {
     margin-left: 55px;
-    margin-right: 35px;
-    font-family: DIN, CALSON-BOLD, 宋体, sans-serif;
+    margin-right: 45px;
+    font-family: AVERIASERIFLIBRE, sans-serif;
     color: #aaa;
+}
+
+.blog-achive .archive-content .archive-item a {
+    font-family: "Microsoft YaHei", sans-serif;
 }
 
 .blog-achive a {
@@ -839,209 +721,95 @@ blockquote cite {
     /*text-decoration: underline;*/
 }
 
-@media screen and (max-width: 1199px) {
-    .blog-achive {
-        margin-top: 30px;
-        margin-left: 160px;
-        margin-right: 215px;
-    }
 
+
+/* 响应式设计 */
+@media screen and (max-width: 1399px) {
+    .blog-achive {
+        margin-left: 200px;
+        margin-right: 200px;
+    }
 }
 
+@media screen and (max-width: 1199px) {
+    .blog-achive {
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+}
 
 @media screen and (max-width: 991px) {
-    .blog-achive {
-        margin-top: 30px;
-        margin-left: 220px;
-        margin-right: 275px;
-    }
 
 }
 
 @media screen and (max-width: 767px) {
-
-    .blog-achive {
-        margin-top: 30px;
-        margin-left: 135px;
-        margin-right: 135px;
-
-    }
-
-
-
     .blog-achive .archive-year {
-        font-size: 25px;
-        font-family: FUTURA, DIN_BOLD, CALSON-BOLD, 宋体, sans-serif;
-        color: #414141;
-        font-weight: bold;
-        padding-top: 45px;
-        padding-bottom: 20px;
         text-align: center;
     }
 
-
-
-    .blog-achive .archive-content .archive-item {
-        margin-top: 30px;
-        margin-bottom: 30px;
-        font-size: 16px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
-
-
-    .blog-achive .archive-content span {
-        /*margin-left: 35px;*/
-        /* 这句话不可少。 */
+    .blog-achive .archive-content .archive-item span {
         margin-left: 0px;
-        margin-right: 30px;
-        font-family: DIN, CALSON-BOLD, 宋体, sans-serif;
-        color: #aaa;
+        margin-right: 35px;
     }
 }
 
-@media screen and (max-width: 512px) {
+@media screen and (max-width: 612px) {
     .blog-achive {
-        margin-top: 30px;
-        margin-left: 60px;
-        margin-right: 60px;
-
-    }
-
-
-
-    .blog-achive .archive-year {
-        font-size: 25px;
-        font-family: FUTURA, DIN_BOLD, CALSON-BOLD, 宋体, sans-serif;
-        color: #414141;
-        font-weight: bold;
-        padding-top: 45px;
-        padding-bottom: 20px;
-        text-align: center;
-    }
-
-
-
-    .blog-achive .archive-content .archive-item {
-        margin-top: 30px;
-        margin-bottom: 30px;
-        font-size: 15px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
-
-
-    .blog-achive .archive-content span {
-        /*margin-left: 35px;*/
-        /* 这句话不可少。 */
-        margin-left: 0px;
-        margin-right: 20px;
-        font-family: DIN, CALSON-BOLD, 宋体, sans-serif;
-        color: #aaa;
+        margin-left: 100px;
+        margin-right: 100px;
     }
 }
 
 
 
 
-/* ---------------------------------------------------------------------------------------------------- */
-/* about style */
-/* ---------------------------------------------------------------------------------------------------- */
-img.img_label_left {
-    float: left;
-    /*width: 149px;*/
-    max-width: 100%;
-}
+/*
+ *
+ * about page
+ *
+ */
 
 .blog-about {
-    margin-top: 115px;
-    margin-left: 170px;
-    margin-right: 170px;
-    padding-left: 25px;
-    padding-right: 25px;
+    margin-top: 100px;
+    margin-left: 250px;
+    margin-right: 250px;
 
 }
 .blog-about .blog-poetry {
-    display: inline-block;
-    vertical-align: top;
-    float: left;
-    /*font-size: 19px;*/
-    font-family: AVERIA_SERIF_LIBRE_BOLD, 宋体, Helvetica, sans-serif;
+    font-family: AVERIASERIFLIBRE, sans-serif;
     font-weight: bold;
-    max-width: 456px;
-    word-wrap: break-word
+    word-wrap: break-word;
+
+    /* overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; */
 }
 
 .blog-about .blog-poetry p {
     /*common p font-size is 16px*/
-    font-size: 19px;
+    font-size: 22px;
     margin-bottom: 10px;
 }
-
-
-/*.blog-about .blog-poetry p {*/
-    /*max-width: 456px;*/
-/*}*/
 
 .blog-about .blog-poetry .poetry-detailname {
     font-style: italic;
     font-weight:bold;
     font-size: 20px;
+    padding-top: 120px;
+
     text-align: right;
-    padding-top: 55px;
 }
 
 .blog-about .blog-poetry .poetry-detailauthor {
     font-style: italic;
     font-weight:bold;
     font-size: 20px;
+
     text-align: right;
-    /*padding-top: 15px;*/
+
+    /* 450px+20px */
+    padding-bottom: 10px;
 }
-
-.blog-about .blog-intro {
-    display: inline-block;
-    vertical-align: top;
-    float: right;
-
-}
-
-.blog-about .blog-intro .intro-pic {
-}
-.blog-about .blog-intro .intro-pic img {
-    /*max-width: 300px;*/
-    width: 300px;
-    margin-bottom: 45px;
-    box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
-}
-
-.blog-about .blog-intro .intro-detail {
-    max-width: 300px;
-}
-
-.blog-about .blog-intro .intro-detail .intro-detail-item {
-    padding-top: 10px;
-    padding-bottom: 20px;
-
-}
-
-.blog-about .blog-intro .intro-detail .intro-detail-item h4 {
-    border-left: 5px solid #500095;
-    padding-left: 7px;
-    color: #500095;
-    opacity: .9;
-    font-size: 18px;
-    line-height: 1.1;
-    /*padding-bottom: 1px;*/
-}
-
-.blog-about .blog-intro .intro-detail .intro-detail-item span {
-    color: #747474;
-    font-size: 14px;
-}
-
 
 .blog-about a {
     text-decoration: none;
@@ -1052,972 +820,38 @@ img.img_label_left {
 }
 
 
-@media screen and (max-width: 1759px) {
-    img.img_label_left {
-        float: left;
-        width: 139px;
-        /*max-width: 100%;*/
-    }
 
+/* 响应式设计 */
+@media screen and (max-width: 1399px) {
     .blog-about {
-        margin-top: 115px;
-        margin-left: 150px;
-        margin-right: 150px;
-        padding-left: 15px;
-        padding-right: 15px;
-
-    }
-
-}
-
-@media screen and (max-width: 1659px) {
-    img.img_label_left {
-        float: left;
-        width: 129px;
-        /*max-width: 100%;*/
-    }
-    .blog-about {
-        margin-top: 115px;
-        margin-left: 130px;
-        margin-right: 130px;
-        padding-left: 5px;
-        padding-right: 5px;
-
-    }
-
-}
-
-@media screen and (max-width: 1599px) {
-    img.img_label_left {
-        float: left;
-        width: 119px;
-        /*max-width: 100%;*/
-    }
-    .blog-about {
-        margin-top: 115px;
-        margin-left: 110px;
-        margin-right: 110px;
-
-        /*这里要将其置为0px才会生效，注释掉无效。*/
-        padding-left: 0;
-        padding-right: 0;
-
-    }
-
-}
-
-@media screen and (max-width: 1459px) {
-
-    img.img_label_left {
-        float: left;
-        width: 114px;
-        /*max-width: 100%;*/
-    }
-    .blog-about {
-        margin-top: 115px;
-        margin-left: 90px;
-        margin-right: 90px;
-
-        /*这里要将其置为0px才会生效，注释掉无效。*/
-        padding-left: 0;
-        padding-right: 0;
-
+        margin-left: 200px;
+        margin-right: 200px;
     }
 }
-
-@media screen and (max-width: 1359px) {
-    img.img_label_left {
-        float: left;
-        width: 109px;
-        /*max-width: 100%;*/
-    }
-    .blog-about {
-        margin-top: 115px;
-        margin-left: 70px;
-        margin-right: 70px;
-
-        /*这里要将其置为0px才会生效，注释掉无效。*/
-        padding-left: 0;
-        padding-right: 0;
-
-    }
-
-    /*同时改变字体大小*/
-    .blog-about .blog-poetry {
-        display: inline-block;
-        vertical-align: top;
-        float: left;
-        font-size: 18px;
-        font-family: AVERIA_SERIF_LIBRE_BOLD, 宋体, Helvetica, sans-serif;
-        font-weight: bold;
-        max-width: 432px;
-    }
-
-    .blog-about .blog-poetry .poetry-detailname {
-        font-style: italic;
-        font-weight:bold;
-        font-size: 19px;
-        text-align: right;
-        padding-top: 50px;
-    }
-
-    .blog-about .blog-poetry .poetry-detailauthor {
-        font-style: italic;
-        font-weight:bold;
-        font-size: 19px;
-        text-align: right;
-        /*padding-top: 15px;*/
-    }
-
-
-
-    .blog-about .blog-intro .intro-pic img {
-        /*max-width: 300px;*/
-        width: 290px;
-        margin-bottom: 35px;
-        box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
-    }
-
-    .blog-about .blog-intro .intro-detail {
-        max-width: 290px;
-    }
-
-    .blog-about .blog-intro .intro-detail .intro-detail-item {
-        padding-top: 20px;
-        padding-bottom: 10px;
-
-    }
-
-    .blog-about .blog-intro .intro-detail .intro-detail-item h4 {
-        border-left: 4px solid #500095;
-        padding-left: 7px;
-        color: #500095;
-        opacity: .9;
-        /*font-size: 18px;*/
-        /*line-height: 1.1;*/
-        /*padding-bottom: 1px;*/
-    }
-
-
-    /*.blog-about .blog-intro .intro-detail .intro-detail-item span {*/
-        /*font-size: 14px;*/
-    /*}*/
-
-}
-
-
-@media screen and (max-width: 1259px) {
-    img.img_label_left {
-        float: left;
-        width: 109px;
-        /*max-width: 100%;*/
-    }
-    .blog-about {
-        margin-top: 115px;
-        margin-left: 55px;
-        margin-right: 55px;
-
-        /*这里要将其置为0px才会生效，注释掉无效。*/
-        padding-left: 0;
-        padding-right: 0;
-
-    }
-}
-
-
-
 
 @media screen and (max-width: 1199px) {
-    img.img_label_left {
-        float: left;
-        width: 109px;
-        /*max-width: 100%;*/
-    }
     .blog-about {
-        margin-top: 115px;
-        margin-left: 50px;
-        margin-right: 50px;
-
-        /*这里要将其置为0px才会生效，注释掉无效。*/
-        padding-left: 0;
-        padding-right: 0;
-
-    }
-
-    /*第二次改变字体大小*/
-    .blog-about .blog-poetry {
-        display: inline-block;
-        vertical-align: top;
-        float: left;
-        font-size: 16px;
-        font-family: AVERIA_SERIF_LIBRE_BOLD, 宋体, Helvetica, sans-serif;
-        font-weight: bold;
-        max-width: 384px;
-    }
-
-
-    .blog-about .blog-poetry .poetry-detailname {
-        font-style: italic;
-        font-weight:bold;
-        font-size: 17px;
-        text-align: right;
-        padding-top: 45px;
-    }
-
-    .blog-about .blog-poetry .poetry-detailauthor {
-        font-style: italic;
-        font-weight:bold;
-        font-size: 17px;
-        text-align: right;
-        /*padding-top: 15px;*/
-    }
-
-
-    .blog-about .blog-intro .intro-pic img {
-        /*max-width: 300px;*/
-        width: 270px;
-        margin-bottom: 30px;
-        box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
-    }
-
-    .blog-about .blog-intro .intro-detail {
-        max-width: 270px;
-    }
-
-    .blog-about .blog-intro .intro-detail .intro-detail-item {
-        padding-top: 15px;
-        padding-bottom: 10px;
-
-    }
-
-    .blog-about .blog-intro .intro-detail .intro-detail-item h4 {
-        border-left: 4px solid #500095;
-        padding-left: 7px;
-        color: #500095;
-        opacity: .9;
-        font-size: 17px;
-        line-height: 1.0;
-        padding-bottom: 1px;
-    }
-
-    .blog-about .blog-intro .intro-detail .intro-detail-item span {
-        font-size: 13px;
+        margin-left: 150px;
+        margin-right: 150px;
     }
 
 }
-
-/*@media screen and (max-width: 1129px) {*/
-
-/*}*/
-@media screen and (max-width: 1119px) {
-    img.img_label_left {
-        float: left;
-        width: 104px;
-        /*max-width: 100%;*/
-    }
-    .blog-about {
-        margin-top: 115px;
-        margin-left: 40px;
-        margin-right: 40px;
-
-        /*这里要将其置为0px才会生效，注释掉无效。*/
-        padding-left: 0;
-        padding-right: 0;
-
-    }
-
-    /*第三次改变字体大小*/
-    .blog-about .blog-poetry {
-        display: inline-block;
-        vertical-align: top;
-        float: left;
-        font-size: 15px;
-        font-family: AVERIA_SERIF_LIBRE_BOLD, 宋体, Helvetica, sans-serif;
-        font-weight: bold;
-        max-width: 360px;
-    }
-
-
-    .blog-about .blog-poetry .poetry-detailname {
-        font-style: italic;
-        font-weight:bold;
-        font-size: 16px;
-        text-align: right;
-        padding-top: 40px;
-    }
-
-    .blog-about .blog-poetry .poetry-detailauthor {
-        font-style: italic;
-        font-weight:bold;
-        font-size: 16px;
-        text-align: right;
-        /*padding-top: 15px;*/
-    }
-
-
-    .blog-about .blog-intro .intro-pic img {
-        /*max-width: 300px;*/
-        width: 260px;
-        margin-bottom: 25px;
-        box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
-    }
-
-    .blog-about .blog-intro .intro-detail {
-        max-width: 260px;
-    }
-
-    .blog-about .blog-intro .intro-detail .intro-detail-item {
-        padding-top: 10px;
-        padding-bottom: 5px;
-
-    }
-
-    .blog-about .blog-intro .intro-detail .intro-detail-item h4 {
-        border-left: 4px solid #500095;
-        padding-left: 7px;
-        color: #500095;
-        opacity: .9;
-        font-size: 16px;
-        line-height: 1.0;
-        padding-bottom: 1px;
-    }
-    .blog-about .blog-intro .intro-detail .intro-detail-item span {
-        font-size: 12px;
-    }
-}
-
-
-@media screen and (max-width: 1029px) {
-    img.img_label_left {
-        float: left;
-        width: 100px;
-        /*max-width: 100%;*/
-    }
-    .blog-about {
-        margin-top: 115px;
-        margin-left: 35px;
-        margin-right: 35px;
-
-        /*这里要将其置为0px才会生效，注释掉无效。*/
-        padding-left: 0;
-        padding-right: 0;
-
-    }
-
-    /*第四次改变字体大小*/
-    .blog-about .blog-poetry {
-        display: inline-block;
-        vertical-align: top;
-        float: left;
-        font-size: 14px;
-        font-family: AVERIA_SERIF_LIBRE_BOLD, 宋体, Helvetica, sans-serif;
-        font-weight: bold;
-        max-width: 336px;
-    }
-
-
-    .blog-about .blog-poetry .poetry-detailname {
-        font-style: italic;
-        font-weight:bold;
-        font-size: 15px;
-        text-align: right;
-        padding-top: 35px;
-    }
-
-    .blog-about .blog-poetry .poetry-detailauthor {
-        font-style: italic;
-        font-weight:bold;
-        font-size: 15px;
-        text-align: right;
-        /*padding-top: 15px;*/
-    }
-
-
-    .blog-about .blog-intro .intro-pic img {
-        /*max-width: 300px;*/
-        width: 250px;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
-    }
-
-    .blog-about .blog-intro .intro-detail {
-        max-width: 250px;
-    }
-
-    .blog-about .blog-intro .intro-detail .intro-detail-item {
-        padding-top: 10px;
-        padding-bottom: 5px;
-
-    }
-
-    .blog-about .blog-intro .intro-detail .intro-detail-item h4 {
-        border-left: 4px solid #500095;
-        padding-left: 7px;
-        color: #500095;
-        opacity: .9;
-        font-size: 15px;
-        line-height: 1.0;
-        padding-bottom: 1px;
-    }
-    .blog-about .blog-intro .intro-detail .intro-detail-item span {
-        font-size: 11px;
-    }
-}
-
-
-
-
-
 
 @media screen and (max-width: 991px) {
-    img.img_label_left {
-        float: left;
-        width: 109px;
-        /*max-width: 100%;*/
-    }
-    .blog-about {
-        margin-top: 115px;
-        margin-left: 70px;
-        margin-right: 70px;
-
-        /*这里要将其置为0px才会生效，注释掉无效。*/
-        padding-left: 0;
-        padding-right: 0;
-
-    }
-
-    .blog-about .blog-poetry {
-        display: inline-block;
-        vertical-align: top;
-        float: left;
-        font-size: 17px;
-        font-family: AVERIA_SERIF_LIBRE_BOLD, 宋体, Helvetica, sans-serif;
-        font-weight: bold;
-        max-width: 408px;
-    }
-
-    .blog-about .blog-poetry .poetry-detailname {
-        font-style: italic;
-        font-weight:bold;
-        font-size: 18px;
-        text-align: right;
-        padding-top: 50px;
-    }
-
-    .blog-about .blog-poetry .poetry-detailauthor {
-        font-style: italic;
-        font-weight:bold;
-        font-size: 18px;
-        text-align: right;
-        /*padding-top: 15px;*/
-    }
-
-
-
-    .blog-about .blog-intro .intro-pic img {
-        /*max-width: 300px;*/
-        width: 280px;
-        margin-bottom: 40px;
-        box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
-    }
-
-    .blog-about .blog-intro .intro-detail {
-        max-width: 280px;
-    }
-
-    .blog-about .blog-intro .intro-detail .intro-detail-item {
-        padding-top: 15px;
-        padding-bottom: 10px;
-
-    }
-
-
-    .blog-about .blog-intro .intro-detail .intro-detail-item h4 {
-        border-left: 4px solid #500095;
-        padding-left: 7px;
-        color: #500095;
-        opacity: .9;
-        font-size: 17px;
-        line-height: 1.1;
-        padding-bottom: 1px;
-    }
-
-
-    .blog-about .blog-intro .intro-detail .intro-detail-item span {
-        font-size: 13px;
-    }
-
 
 }
 
-
-
-@media screen and (max-width: 929px) {
-    img.img_label_left {
-        float: left;
-        width: 104px;
-        /*max-width: 100%;*/
-    }
-    .blog-about {
-        margin-top: 115px;
-        margin-left: 50px;
-        margin-right: 50px;
-
-        /*这里要将其置为0px才会生效，注释掉无效。*/
-        padding-left: 0;
-        padding-right: 0;
-
-    }
-
-    .blog-about .blog-poetry {
-        display: inline-block;
-        vertical-align: top;
-        float: left;
-        font-size: 16px;
-        font-family: AVERIA_SERIF_LIBRE_BOLD, 宋体, Helvetica, sans-serif;
-        font-weight: bold;
-        max-width: 384px;
-    }
-
-
-    .blog-about .blog-poetry .poetry-detailname {
-        font-style: italic;
-        font-weight:bold;
-        font-size: 17px;
-        text-align: right;
-        padding-top: 45px;
-    }
-
-    .blog-about .blog-poetry .poetry-detailauthor {
-        font-style: italic;
-        font-weight:bold;
-        font-size: 17px;
-        text-align: right;
-        /*padding-top: 15px;*/
-    }
-
-
-    .blog-about .blog-intro .intro-pic img {
-        /*max-width: 300px;*/
-        width: 270px;
-        margin-bottom: 30px;
-        box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
-    }
-
-    .blog-about .blog-intro .intro-detail {
-        max-width: 270px;
-    }
-
-    .blog-about .blog-intro .intro-detail .intro-detail-item {
-        padding-top: 15px;
-        padding-bottom: 10px;
-
-    }
-
-    .blog-about .blog-intro .intro-detail .intro-detail-item h4 {
-        border-left: 4px solid #500095;
-        padding-left: 7px;
-        color: #500095;
-        opacity: .9;
-        font-size: 17px;
-        line-height: 1.0;
-        padding-bottom: 1px;
-    }
-
-    .blog-about .blog-intro .intro-detail .intro-detail-item span {
-        font-size: 13px;
-    }
-}
-
-@media screen and (max-width: 829px) {
-    img.img_label_left {
-        float: left;
-        /*width: 99px;*/
-        width: 104px;
-        /*max-width: 100%;*/
-    }
-
-    .blog-about {
-        margin-top: 115px;
-        margin-left: 45px;
-        margin-right: 45px;
-
-        /*这里要将其置为0px才会生效，注释掉无效。*/
-        padding-left: 0;
-        padding-right: 0;
-
-    }
-
-    .blog-about .blog-poetry {
-        display: inline-block;
-        vertical-align: top;
-        float: left;
-        font-size: 15px;
-        font-family: AVERIA_SERIF_LIBRE_BOLD, 宋体, Helvetica, sans-serif;
-        font-weight: bold;
-        max-width: 360px;
-    }
-
-
-    .blog-about .blog-poetry .poetry-detailname {
-        font-style: italic;
-        font-weight:bold;
-        font-size: 16px;
-        text-align: right;
-        padding-top: 40px;
-    }
-
-    .blog-about .blog-poetry .poetry-detailauthor {
-        font-style: italic;
-        font-weight:bold;
-        font-size: 16px;
-        text-align: right;
-        /*padding-top: 15px;*/
-    }
-
-
-    .blog-about .blog-intro .intro-pic img {
-        /*max-width: 300px;*/
-        width: 260px;
-        margin-bottom: 30px;
-        box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
-    }
-
-    .blog-about .blog-intro .intro-detail {
-        max-width: 260px;
-    }
-
-    .blog-about .blog-intro .intro-detail .intro-detail-item {
-        padding-top: 10px;
-        padding-bottom: 5px;
-
-    }
-
-    .blog-about .blog-intro .intro-detail .intro-detail-item h4 {
-        border-left: 4px solid #500095;
-        padding-left: 7px;
-        color: #500095;
-        opacity: .9;
-        font-size: 16px;
-        line-height: 1.0;
-        padding-bottom: 1px;
-    }
-
-    .blog-about .blog-intro .intro-detail .intro-detail-item span {
-        font-size: 12px;
-    }
-}
-
-
-
-
-
-/*手机屏幕显示*/
 @media screen and (max-width: 767px) {
-    img.img_label_left {
-        float: left;
-        width: 129px;
-        margin-top: -10px;
-    }
 
-
-    .blog-about {
-        margin-top: 115px;
-        margin-left: 45px;
-        margin-right: 45px;
-
-        /*这里要将其置为0px才会生效，注释掉无效。*/
-        padding-left: 0;
-        padding-right: 0;
-
-    }
-
-
-    .blog-about .blog-poetry {
-        display: block;
-        clear: both;
-        float: none;
-        font-size: 18px;
-        font-family: AVERIA_SERIF_LIBRE_BOLD, 宋体, Helvetica, sans-serif;
-        font-weight: bold;
-        /*max-width: 456px;*/
-        max-width: 77%;
-        /*width:auto;*/
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-
-    .blog-about .blog-poetry .poetry-detailname {
-        font-style: italic;
-        font-weight:bold;
-        font-size: 19px;
-        text-align: right;
-        padding-top: 55px;
-    }
-
-    .blog-about .blog-poetry .poetry-detailauthor {
-        font-style: italic;
-        font-weight:bold;
-        font-size: 19px;
-        text-align: right;
-
-        margin-bottom: 125px;
-    }
-
-    .blog-about .blog-intro {
-        display: block;
-        clear: both;
-        float: none;
-        max-width: 77%;
-        margin-left: auto;
-        margin-right: auto;
-
-    }
-    .blog-about .blog-intro .intro-pic {
-        /*display: inline-block;*/
-        /*vertical-align: top;*/
-    }
-
-    .blog-about .blog-intro .intro-pic img {
-        width: 350px;
-        margin-bottom: 45px;
-        box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
-    }
-
-    .blog-about .blog-intro .intro-detail {
-        max-width: 350px;
-        /*display: inline-block;*/
-        /*vertical-align: top;*/
-    }
-
-    .blog-about .blog-intro .intro-detail .intro-detail-item {
-        padding-top: 20px;
-        padding-bottom: 10px;
-
-    }
-
-    .blog-about .blog-intro .intro-detail .intro-detail-item h4 {
-        border-left: 5px solid #500095;
-        padding-left: 7px;
-        color: #500095;
-        opacity: .9;
-        font-size: 18px;
-        line-height: 1.0;
-        padding-bottom: 1px;
-        display: inline-block;
-        padding-right: 11px;
-    }
-
-    .blog-about .blog-intro .intro-detail .intro-detail-item span {
-        font-size: 18px;
-        padding-bottom: 1px;
-    }
 }
-
 
 @media screen and (max-width: 612px) {
-    img.img_label_left {
-        float: left;
-        width: 124px;
-        margin-top: -10px;
-    }
-
-
     .blog-about {
-        margin-top: 115px;
-        margin-left: 30px;
-        margin-right: 30px;
-
-        /*这里要将其置为0px才会生效，注释掉无效。*/
-        padding-left: 0;
-        padding-right: 0;
-
-    }
-
-
-    .blog-about .blog-poetry {
-        display: block;
-        clear: both;
-        float: none;
-        font-size: 17px;
-        font-family: AVERIA_SERIF_LIBRE_BOLD, 宋体, Helvetica, sans-serif;
-        font-weight: bold;
-        /*max-width: 456px;*/
-        max-width: 77%;
-        /*width:auto;*/
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-
-    .blog-about .blog-poetry .poetry-detailname {
-        font-style: italic;
-        font-weight:bold;
-        font-size: 18px;
-        text-align: right;
-        padding-top: 50px;
-    }
-
-    .blog-about .blog-poetry .poetry-detailauthor {
-        font-style: italic;
-        font-weight:bold;
-        font-size: 18px;
-        text-align: right;
-
-        margin-bottom: 120px;
-    }
-
-    .blog-about .blog-intro {
-        display: block;
-        clear: both;
-        float: none;
-        max-width: 77%;
-        margin-left: auto;
-        margin-right: auto;
-
-    }
-    .blog-about .blog-intro .intro-pic {
-        /*display: inline-block;*/
-        /*vertical-align: top;*/
-    }
-
-    .blog-about .blog-intro .intro-pic img {
-        width: 300px;
-        margin-bottom: 40px;
-        box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
-    }
-
-    .blog-about .blog-intro .intro-detail {
-        max-width: 300px;
-        /*display: inline-block;*/
-        /*vertical-align: top;*/
-    }
-
-    .blog-about .blog-intro .intro-detail .intro-detail-item {
-        padding-top: 20px;
-        padding-bottom: 5px;
-
-    }
-
-    .blog-about .blog-intro .intro-detail .intro-detail-item h4 {
-        border-left: 4px solid #500095;
-        padding-left: 7px;
-        color: #500095;
-        opacity: .9;
-        font-size: 17px;
-        line-height: 1.0;
-        padding-bottom: 1px;
-        display: inline-block;
-        padding-right: 11px;
-    }
-
-    .blog-about .blog-intro .intro-detail .intro-detail-item span {
-        font-size: 17px;
-        padding-bottom: 1px;
+        margin-left: 100px;
+        margin-right: 100px;
     }
 }
 
-/*手机屏幕显示*/
-@media screen and (max-width: 512px) {
-    img.img_label_left {
-        float: left;
-        width: 119px;
-        margin-top: -10px;
-    }
 
 
-    .blog-about {
-        margin-top: 115px;
-        margin-left: 10px;
-        margin-right: 10px;
 
-        /*这里要将其置为0px才会生效，注释掉无效。*/
-        padding-left: 0;
-        padding-right: 0;
-
-    }
-
-
-    .blog-about .blog-poetry {
-        display: block;
-        clear: both;
-        float: none;
-        font-size: 15px;
-        font-family: AVERIA_SERIF_LIBRE_BOLD, 宋体, Helvetica, sans-serif;
-        font-weight: bold;
-        /*max-width: 456px;*/
-        max-width: 77%;
-        /*width:auto;*/
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-
-    .blog-about .blog-poetry .poetry-detailname {
-        font-style: italic;
-        font-weight:bold;
-        font-size: 16px;
-        text-align: right;
-        padding-top: 45px;
-    }
-
-    .blog-about .blog-poetry .poetry-detailauthor {
-        font-style: italic;
-        font-weight:bold;
-        font-size: 16px;
-        text-align: right;
-
-        margin-bottom: 115px;
-    }
-
-    .blog-about .blog-intro {
-        display: block;
-        clear: both;
-        float: none;
-        max-width: 77%;
-        margin-left: auto;
-        margin-right: auto;
-
-    }
-    .blog-about .blog-intro .intro-pic {
-        /*display: inline-block;*/
-        /*vertical-align: top;*/
-    }
-
-    .blog-about .blog-intro .intro-pic img {
-        width: 260px;
-        margin-bottom: 35px;
-        box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
-    }
-
-    .blog-about .blog-intro .intro-detail {
-        max-width: 260px;
-        /*display: inline-block;*/
-        /*vertical-align: top;*/
-    }
-
-    .blog-about .blog-intro .intro-detail .intro-detail-item {
-        padding-top: 20px;
-        padding-bottom: 0px;
-
-    }
-
-    .blog-about .blog-intro .intro-detail .intro-detail-item h4 {
-        border-left: 4px solid #500095;
-        padding-left: 7px;
-        color: #500095;
-        opacity: .9;
-        font-size: 16px;
-        line-height: 1.0;
-        padding-bottom: 1px;
-        display: inline-block;
-        padding-right: 11px;
-    }
-
-    .blog-about .blog-intro .intro-detail .intro-detail-item span {
-        font-size: 16px;
-        padding-bottom: 1px;
-    }
-
-}

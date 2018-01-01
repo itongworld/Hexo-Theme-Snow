@@ -27,6 +27,10 @@ code {
     line-height: 1.4;
 }
 
+figure {
+    box-shadow: 0 0 0 1px rgba(0,0,0,.06);
+}
+
 figure.highlight,
 .codeblock {
     margin: 10px 0;

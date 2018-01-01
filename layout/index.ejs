@@ -13,7 +13,9 @@
       <% } else if (is_post()) { %>
         <%- partial('_partial/nav', {Name: 'Post'}) %>
       <% } else if (is_archive()) { %>
-        <%- partial('_partial/nav', {Name: 'Archive'}) %>
+        <%- partial('_partial/nav', {Name: 'Archives'}) %>
+      <% } else { %>
+        <%- partial('_partial/nav', {Name: 'About'}) %>
       <% } %>
 
 

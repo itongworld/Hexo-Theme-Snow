@@ -1,7 +1,7 @@
   <!-- website footer -->
 <% if (is_post()) { %>
 <div class="post-footer">
-  <p class="footer-copyright">&copy;&nbsp;<%= theme.startyear %>&nbsp;-&nbsp;<%- date(Date.now(), 'YYYY') %>&nbsp;<%= theme.owner %></p>
+  <p class="footer-copyright">&copy;&nbsp;<%= theme.startyear %>-<%- date(Date.now(), 'YYYY') %>&nbsp;<%= theme.owner %></p>
   <p class="footer-poweredby">Powered by <a href="https://github.com/itongworld"><%= theme.theme_name %></a> and <a href="https://hexo.io/"><%= theme.blogengine_name %></a></p>
 </div>
 
@@ -20,7 +20,7 @@
 
 <% } else { %>
   <div class="section-footer">
-      <p class="footer-copyright">&copy;&nbsp;<%= theme.startyear %>&nbsp;-&nbsp;<%- date(Date.now(), 'YYYY') %>&nbsp;<%= theme.owner %></p>
+      <p class="footer-copyright">&copy;&nbsp;<%= theme.startyear %>-<%- date(Date.now(), 'YYYY') %>&nbsp;<%= theme.owner %></p>
       <p class="footer-poweredby">Powered by <a href="<%= theme.Snow %>"><%= theme.theme_name %></a> and <a href="<%= theme.Hexo %>"><%= theme.blogengine_name %></a></p>
   </div>
 </div>
