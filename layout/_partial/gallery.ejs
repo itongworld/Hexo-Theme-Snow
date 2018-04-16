@@ -1,0 +1,14 @@
+<!-- Gallery for article excerpt -->
+<div class="post-gallery">
+    <!-- 这里有个小BUG： 如果两个行内元素换行书写，那么浏览器显示时，会自动在这两个行内元素间添加一个空格 -->
+    <% post.photos.forEach(function(photo, i) { %>
+        <% if (i == 0) { %>
+            <img src="<%- url_for(photo) %>" alt="<%- photo %>" title="<%- photo %>"/><%- '<!--' %>
+        <% } else if (i == post.photos.length-1) { %>
+            <%- '-->' %><img src="<%- url_for(photo) %>" alt="<%- photo %>" title="<%- photo %>"/>
+        <% } else { %>
+            <%- '-->' %><img src="<%- url_for(photo) %>" alt="<%- photo %>" title="<%- photo %>"/><%- '<!--' %>
+        <% } %>
+    <% }) %>
+
+</div>

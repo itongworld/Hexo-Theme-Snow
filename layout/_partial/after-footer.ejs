@@ -14,33 +14,92 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-
 </script> -->
 <script type="text/javascript">
 
-  $(function() {
-    $(".post-content p img").height($(".post-content p img").width());
-    //alert("window onload"+ $(".post-content p img").width() + ", " + $(".post-content p img").height())
-    //console.log($(".post-content p img").width() + ", " + $(".post-content p img").height())
+    $(function() {
 
-    // $(window).load(function() {
-    //
-    //   $(".post-content p img").height($(".post-content p img").width());
-    //   //alert("window onload"+ $(".post-content p img").width() + ", " + $(".post-content p img").height())
-    //   console.log($(".post-content p img").width() + ", " + $(".post-content p img").height())
-    //
-    // });
 
-    $(window).resize(function() {
-      $(".post-content p img").height($(".post-content p img").width());
-      //alert($(".post-content p img").width() + ", " + $(".post-content p img").height())
-      //console.log($(".post-content p img").width() + ", " + $(".post-content p img").height())
+        //index和post页面都有post-content类。blog-post下的post-content类是index页面的，post-container下的post-content类是post页面的。
+        //这段代码要放在最前面设置好图片相应宽度。
+        //$(".post-container .post-content p img[alt]").each(function(){
+        $(".post-content p img[alt]").each(function(){
+
+            var altstr = $(this).attr("alt");
+            //alert(altstr);
+
+            if(altstr.endsWith("-1gg")){
+                $(this).addClass("gg1");
+            }
+
+            else if(altstr.endsWith("-2gg")){
+                $(this).addClass("gg2");
+            }
+
+            else if(altstr.endsWith("-3gg")){
+                $(this).addClass("gg3");
+            }
+            else{
+                $(this).addClass("gg1");
+                altstr += "-1gg";
+                $(this).attr("alt", altstr);
+            }
+
+            //add title
+            $(this).attr("title", altstr.substring(0, altstr.length-4));
+
+        });
+
+
+
+        //设置图片初始相应高度。
+        $(".post-content p img.gg3").height($(".post-content p img.gg3").width() * 2);
+        //alert("window onload"+ $(".post-content p img").width() + ", " + $(".post-content p img").height())
+        //console.log($(".post-content p img").width() + ", " + $(".post-content p img").height())
+
+        // $(window).load(function() {
+        //
+        //   $(".post-content p img").height($(".post-content p img").width());
+        //   //alert("window onload"+ $(".post-content p img").width() + ", " + $(".post-content p img").height())
+        //   console.log($(".post-content p img").width() + ", " + $(".post-content p img").height())
+        //
+        // });
+
+
+        $(".post-content p img.gg2").height($(".post-content p img.gg2").width());
+        //$(".post-content p img.gg1").height($(".post-content p img").width());
+
+        //Gallery
+        $(".blog-post .post-gallery img").height($(".blog-post .post-gallery img").width());
+
+
+
+
+        //设置图片缩放相应高度。
+        $(window).resize(function() {
+            $(".post-content p img.gg3").height($(".post-content p img.gg3").width() * 2);
+            //alert($(".post-content p img").width() + ", " + $(".post-content p img").height())
+            //console.log($(".post-content p img").width() + ", " + $(".post-content p img").height())
+
+
+            $(".post-content p img.gg2").height($(".post-content p img.gg2").width());
+            //$(".post-content p img.gg1").height($(".post-content p img").width());
+
+            //Gallery
+            $(".blog-post .post-gallery img").height($(".blog-post .post-gallery img").width());
+
+        });
+
+
+
     });
 
 
-  });
 </script>
+
 
 
 <% if (is_post()) { %>
   <script type="text/javascript">
     $(function () {
+
         $('body').scrollspy({
             target: '.post-toc',
             offset: 10
@@ -79,5 +138,6 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-
         });
 
     });
+
   </script>
 <% } %>

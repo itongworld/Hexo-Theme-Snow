@@ -1,5 +1,12 @@
 <!-- website posts excerpt -->
 <article class="blog-post">
+
+    <!-- Gallery -->
+    <% if (post.photos && post.photos.length){ %>
+      <%- partial('_partial/gallery') %>
+    <% } %>
+
+    <!-- Content -->
     <div class="post-header">
         <h1>
           <% if (post.link) { %>

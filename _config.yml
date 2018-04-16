@@ -37,7 +37,7 @@ default_user_avatar: "/img/default_user_avatar.png"
 
 # Quote
 index_quote: If I have seen a little further, It is by standing on the shoulder of giants.
-index_user_avatar: 
+index_user_avatar: /index_user_avatar.jpg
 
 
 
