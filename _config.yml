@@ -5,7 +5,7 @@
 
 # Head
 keywords: Computer Vision, Deep Learning, Machine Learning, Python, Hexo, Snow
-author: itongworld, itongworld@gmail.com
+author: tong, itongworld@gmail.com
 description: 欧阳童的个人博客——学习，总结，提升
 title: 欧阳阳阳的个人博客
 
@@ -36,7 +36,7 @@ default_post_cover: /img/default_post_cover.png
 default_user_avatar: "/img/default_user_avatar.png"
 
 # Quote
-index_quote: If I have seen a little further, It is by standing on the shoulder of giants.
+index_quote: If I have seen a little further it is by standing on the shoulders of Giants.
 index_user_avatar: /index_user_avatar.jpg
 
 
@@ -49,7 +49,7 @@ favicon: /favicon.png
 
 # Copyright Information
 startyear: 2017
-owner: itongworld
+owner: tong
 
 
 # About Config
@@ -58,8 +58,8 @@ about_quote: Three passions|simple but overwhelmingly strong|have governed my li
 about_quote_name: What I Have Lived For
 about_quote_author: by Bertrand Russell
 
-intros_nickname: itongworld
+intros_nickname: tong
 intros_birthday: 1993-07-14
 intros_hometown: Handan, Hebei
 intros_college: Beijing Institute of Technology
-intros_hobby: Movie, Gaming, Journey, Photography
+intros_hobby:

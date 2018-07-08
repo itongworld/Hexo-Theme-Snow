@@ -129,14 +129,12 @@ blockquote cite {
     color: #414141;
 
     padding-top: 15px;
-    padding-left: 45px;
-    padding-right: 45px;
-    padding-bottom: 45px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 100px;
     width: 100%;
 
-    /*overflow: hidden;*/
-    /*white-space: nowrap;*/
-    /*text-overflow: ellipsis;*/
+
     font-family: SHRIKHAND, FANGZHENG-ZHENGCUHEI, sans-serif;
     font-size: 22px;
 }
@@ -185,6 +183,14 @@ blockquote cite {
     font-family: AVERIASERIFLIBRE, "Microsoft YaHei", sans-serif;
     font-weight: bold;
     line-height: 1.3em;
+    text-transform: uppercase;
+
+    overflow: hidden;
+    white-space: nowrap;
+
+    /* 这个样式应该设置在当前元素上，如果在其父元素上则失效。 */
+    text-overflow: ellipsis;
+    
 }
 
 .section-profile .socal-links {
@@ -393,6 +399,7 @@ blockquote cite {
     font-family: CASLON-REGULAR, 宋体, sans-serif;
     color: #414141;
     text-transform: uppercase;
+    
 }
 
 .blog-post .post-header h1 {
@@ -400,6 +407,9 @@ blockquote cite {
     font-weight: bold;
     color: #414141;
     font-size: 34px;
+    
+    /* 数字或英文字母不会像中文汉字一样可以自动换行，但是数字或英文字母中加入空格则可以自动换行。 */
+    /* word-wrap: break-word; */
 }
 .blog-post .post-header h2 { }
 
@@ -647,7 +657,8 @@ blockquote cite {
 
 
 
-/* 响应式设计 */
+/* 1920*1080尺寸时使用这个样式 */
+/* 1366*768尺寸时也会在宽度大于1199时使用这个样式 */
 @media screen and (max-height: 714px) {
     .section-profile .logo-image {
         /* padding-top: 77px; */
@@ -679,7 +690,7 @@ blockquote cite {
 /* 1920*1080和1366*768的区别是屏幕高度不同 */
 /* 1920*1080不能和1366*768公用一个(max-width: 1199px)设置 */
 /* @media screen and (max-width: 1199px) and (max-height: 714px)可以为1366*768单独设置样式，实现1920*1080和1366*768样式独立。 */
-/* 否则1920*1080使用的是1366*768的样式 */
+/* 否则1920*1080使用的是后续定义的1366*768的样式，从而丢失了1920*1080的原来的样式 */
 @media screen and (max-width: 1199px) and (max-height: 714px) {
     .blockquote-font {
         display: none;
@@ -826,9 +837,6 @@ blockquote cite {
     font-weight: bold;
     word-wrap: break-word;
 
-    /* overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis; */
 }
 
 .blog-about .blog-poetry p {

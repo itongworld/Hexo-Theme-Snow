@@ -214,6 +214,7 @@ blockquote cite {
     /* display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
+    
     overflow: hidden; */
 
 }
@@ -283,10 +284,6 @@ blockquote cite {
         color: #fefefe;
         transform: translate(-50%, -100%);    /* 50%为自身尺寸的一半 */
 
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-
     }
 
 }
@@ -297,6 +294,17 @@ blockquote cite {
 /* ---------------------------------------------------------------------------------------------------- */
 /* post toc style */
 /* ---------------------------------------------------------------------------------------------------- */
+
+/*这里有一个小细节：当点击toc中的目录项时相应的目录项会加粗，而之前活动的目录项会取消加粗。
+加粗或取消加粗会导致相同长度的文本变得略有差别。
+这一方面是因为包含数字和英文句号造成的，另一方面是字体问题（例如使用"'Helvetica Neue',Helvetica,Arial,sans-serif"字体族就不会出现上述问题）。
+*/
+
+/*
+参考https://v3.bootcss.com/components/，
+或https://getbootstrap.com/docs/3.3/components/，在控制台中尝试将toc中的英文单词改为中文文字并添加数字和英文句号，然后观察加粗或取消加粗的变化效果。
+*/
+
 .f {
     position: fixed;
     top: 0;
